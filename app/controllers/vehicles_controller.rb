@@ -8,6 +8,7 @@ class VehiclesController < ApplicationController
     authorize @vehicles
   end
 
+
   # GET /vehicles/1
   # GET /vehicles/1.json
   def show

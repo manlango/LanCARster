@@ -9,6 +9,9 @@ class EmployeePolicy < ApplicationPolicy
     user.present? && user.admin?
   end
 
+  def new?
+    user.present? && user.admin?
+  end
 
   def update?
     user.present?

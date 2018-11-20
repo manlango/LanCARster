@@ -18,4 +18,8 @@ class QuotePolicy < ApplicationPolicy
     user.present?
   end
 
+  def new?
+    user.present?
+  end
+
 end

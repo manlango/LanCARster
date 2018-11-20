@@ -3,8 +3,14 @@ class VehiclePolicy < ApplicationPolicy
     true
   end
 
+  def create?
+    user.present? && user.inventory?
+  end
 
 
+  def new?
+    user.present? && user.inventory?
+  end
 
 
   def update?
