@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vin: MyString
+  year: 1
+  make: MyString
+  model: MyString
+  color: MyString
+  wholesale_price: MyString
+  image_id: MyString
+
+two:
+  vin: MyString
+  year: 1
+  make: MyString
+  model: MyString
+  color: MyString
+  wholesale_price: MyString
+  image_id: MyString

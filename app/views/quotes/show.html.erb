@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @quote.customer %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @quote.employee %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @quote.vehicle %>
+</p>
+
+<p>
+  <strong>Markup:</strong>
+  <%= @quote.markup %>
+</p>
+
+<p>
+  <strong>Sales tax:</strong>
+  <%= @quote.sales_tax %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @quote.total %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>
