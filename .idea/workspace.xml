@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ead248e2-56a4-4958-a6e6-59b061bd15df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/controllers/vehicles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/vehicles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/customer_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/customer_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/employee_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/employee_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/quote_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/quote_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/vehicle_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/vehicle_policy.rb" afterDir="false" />
-    </list>
+    <list default="true" id="ead248e2-56a4-4958-a6e6-59b061bd15df" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,8 +233,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="570" />
-    <option name="width" value="1358" />
+    <option name="x" value="767" />
+    <option name="width" value="1160" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -415,7 +409,7 @@
     <property name="SearchEverywhereHistoryKey" value="rou&#9;FILE&#9;file://C:/Users/marin/Some_App/config/routes.rb&#10;routes&#9;FILE&#9;file://C:/Users/marin/Some_App/config/routes.rb&#10;rout&#9;FILE&#9;file://C:/Users/marin/Some_App/config/routes.rb&#10;admi&#9;null&#9;null&#10;ADMIN&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542693409937" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542694912581" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="C:/FinalProject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -446,15 +440,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542601267533</updated>
-      <workItem from="1542601269539" duration="52534000" />
+      <workItem from="1542601269539" duration="53126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52534000" />
+    <option name="totallyTimeSpent" value="53126000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="456" y="0" width="1086" height="830" extended-state="0" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -462,7 +456,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.35867447" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.5104022" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" weight="0.32902297" />
       <window_info anchor="bottom" id="Version Control" order="0" />

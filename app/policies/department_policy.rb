@@ -5,8 +5,13 @@ class DepartmentPolicy < ApplicationPolicy
   end
 
 
+  def new?
+    user.present? && user.admin?
+  end
+
+
   def create?
-    user.present? && user.finance?
+    user.present? && user.admin?
   end
 
 
