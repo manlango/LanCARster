@@ -1,25 +1,33 @@
 class QuotePolicy < ApplicationPolicy
   def index?
-    true
+    return true if user.present? && user.admin?
+    user.present? && user == quote.user
   end
 
 
   def create?
-    user.present?
+    user.present? && user.agent?
   end
 
 
   def update?
-    user.present?
+    return true if user.present? && user.admin?
+    user.present? && user == quote.user
 
   end
 
   def destroy?
-    user.present?
+    return true if user.present? && user.admin?
+    user.present? && user == quote.user
   end
 
   def new?
-    user.present?
+    user.present? && user.agent? || user.admin?
+  end
+
+  private
+  def quote
+    record
   end
 
 end

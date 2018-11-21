@@ -14,8 +14,8 @@ class VehiclePolicy < ApplicationPolicy
 
 
   def update?
-   user.present? &&  user.inventory?
-end
+    user.present? &&  user.inventory?
+  end
 
   def destroy?
     user.present? &&  user.inventory?

@@ -15,12 +15,12 @@ class CustomerPolicy < ApplicationPolicy
 
 
   def update?
-    user.present?
+    user.present? && user.agent?
 
   end
 
   def destroy?
-    user.present?
+    user.present? && user.agent?
   end
 
 end
