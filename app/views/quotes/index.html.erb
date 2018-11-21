@@ -25,13 +25,14 @@
         <td><%= quote.sales_tax %></td>
         <td><%= quote.total %></td>
         <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %></td>
+        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if policy(Quote).new? %>
 <%= link_to 'New Quote', new_quote_path %>
+<%end %>
