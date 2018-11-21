@@ -18,9 +18,9 @@
   <tbody>
     <% @quotes.each do |quote| %>
       <tr>
-        <td><%= quote.customer %></td>
-        <td><%= quote.vehicle %></td>
-        <td><%= quote.user %></td>
+        <td><%= quote.customer.full_name %></td>
+        <td><%= quote.vehicle.vin %></td>
+        <td><%= quote.user.email %></td>
         <td><%= quote.markup %></td>
         <td><%= quote.sales_tax %></td>
         <td><%= quote.total %></td>

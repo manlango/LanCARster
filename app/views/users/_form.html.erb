@@ -12,12 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :role, "Role" %>
-   <%= form.text_field :role %>
-
+    <%= form.label :role %><br/> >
+    <%= form.select :role, options_for_select(["agent", "sales", "finance", "inventory"])%>
   </div>
-
-
 
   <div class="actions">
     <%= form.submit %>
