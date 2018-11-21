@@ -17,7 +17,7 @@ class QuotesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create quote" do
     assert_difference('Quote.count') do
-      post quotes_url, params: { quote: { customer_id: @quote.customer_id, employee_id: @quote.employee_id, markup: @quote.markup, sales_tax: @quote.sales_tax, total: @quote.total, vehicle_id: @quote.vehicle_id } }
+      post quotes_url, params: { quote: { customer_id: @quote.customer_id, markup: @quote.markup, sales_tax: @quote.sales_tax, total: @quote.total, user_id: @quote.user_id, vehicle_id: @quote.vehicle_id } }
     end
 
     assert_redirected_to quote_url(Quote.last)
@@ -34,7 +34,7 @@ class QuotesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update quote" do
-    patch quote_url(@quote), params: { quote: { customer_id: @quote.customer_id, employee_id: @quote.employee_id, markup: @quote.markup, sales_tax: @quote.sales_tax, total: @quote.total, vehicle_id: @quote.vehicle_id } }
+    patch quote_url(@quote), params: { quote: { customer_id: @quote.customer_id, markup: @quote.markup, sales_tax: @quote.sales_tax, total: @quote.total, user_id: @quote.user_id, vehicle_id: @quote.vehicle_id } }
     assert_redirected_to quote_url(@quote)
   end
 

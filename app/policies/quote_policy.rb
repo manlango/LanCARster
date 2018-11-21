@@ -1,12 +1,12 @@
 class QuotePolicy < ApplicationPolicy
   def index?
-    return true if user.present? && user.admin?
-    user.present? && user == quote.user
+     user.present?
+
   end
 
 
   def create?
-    user.present? && user.agent?
+    user.present? && user.agent? || user.admin?
   end
 
 
@@ -24,6 +24,8 @@ class QuotePolicy < ApplicationPolicy
   def new?
     user.present? && user.agent? || user.admin?
   end
+
+
 
   private
   def quote

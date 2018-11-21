@@ -5,12 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts
-  has_many :vehicles
+ has_many :vehicles
   has_many :departments
-  has_many :employees
-  has_many :quotes
+
+
   has_many :customers
 
+def full_name
+  "#{first_name} #{last_name}"
+end
 
   def admin?
     role == "admin"

@@ -15,6 +15,10 @@
   <% if user_signed_in? %>
   <%= current_user.email %>
       <%= link_to "Home", root_url %>
+
+      <% if policy(User).new? %>
+      <%= link_to "Manage Users", users_path %>
+        <%end %>
     <%= link_to "Logout", destroy_user_session_path, method: :delete %>
     <%= link_to "Edit profile", edit_user_registration_path %>
 
@@ -23,9 +27,7 @@
         <%= link_to "Roles", departments_path %>
       <% end %>
 
-      <% if policy(Employee).new? %>
-    <%= link_to "Manage Employees", employees_path %>
-        <% end %>
+
 
 
 

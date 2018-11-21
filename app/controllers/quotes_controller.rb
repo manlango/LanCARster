@@ -11,7 +11,6 @@ class QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
-    authorize @quotes
   end
 
   # GET /quotes/new
@@ -28,7 +27,7 @@ class QuotesController < ApplicationController
   # POST /quotes.json
   def create
     @quote = Quote.new(quote_params)
-    authorize @quotes
+    authorize @quote
     respond_to do |format|
       if @quote.save
         format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
@@ -43,6 +42,7 @@ class QuotesController < ApplicationController
   # PATCH/PUT /quotes/1
   # PATCH/PUT /quotes/1.json
   def update
+    authorize @quotes
     respond_to do |format|
       if @quote.update(quote_params)
         format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }
@@ -68,11 +68,11 @@ class QuotesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
       @quote = Quote.find(params[:id])
-      authorize @quotes
+      authorize @quote
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
-      params.require(:quote).permit(:customer_id, :employee_id, :vehicle_id, :markup, :sales_tax, :total)
+      params.require(:quote).permit(:customer_id, :vehicle_id, :user_id, :markup, :sales_tax, :total)
     end
 end

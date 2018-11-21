@@ -4,21 +4,21 @@ class VehiclePolicy < ApplicationPolicy
   end
 
   def create?
-    user.present? && user.inventory?
+    user.present? && user.inventory? || user.admin?
   end
 
 
   def new?
-    user.present? && user.inventory?
+    user.present? && user.inventory?|| user.admin?
   end
 
 
   def update?
-    user.present? &&  user.inventory?
+    user.present? &&  user.inventory?|| user.admin?
   end
 
   def destroy?
-    user.present? &&  user.inventory?
+    user.present? &&  user.inventory?|| user.admin?
   end
 
 

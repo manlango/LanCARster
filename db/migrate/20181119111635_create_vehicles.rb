@@ -6,7 +6,7 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.string :make
       t.string :model
       t.string :color
-      t.string :wholesale_price
+      t.float :wholesale_price
       t.string :image_id
 
       t.timestamps

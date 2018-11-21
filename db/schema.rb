@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_022023) do
+ActiveRecord::Schema.define(version: 2018_11_21_135513) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "customers", force: :cascade do |t|
     t.string "gender"
@@ -29,16 +32,6 @@ ActiveRecord::Schema.define(version: 2018_11_21_022023) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.integer "department_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["department_id"], name: "index_employees_on_department_id"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
@@ -48,16 +41,16 @@ ActiveRecord::Schema.define(version: 2018_11_21_022023) do
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.integer "customer_id"
-    t.integer "employee_id"
-    t.integer "vehicle_id"
+    t.bigint "customer_id"
+    t.bigint "vehicle_id"
+    t.bigint "user_id"
     t.float "markup"
     t.float "sales_tax"
     t.float "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["customer_id"], name: "index_quotes_on_customer_id"
-    t.index ["employee_id"], name: "index_quotes_on_employee_id"
+    t.index ["user_id"], name: "index_quotes_on_user_id"
     t.index ["vehicle_id"], name: "index_quotes_on_vehicle_id"
   end
 
@@ -85,10 +78,13 @@ ActiveRecord::Schema.define(version: 2018_11_21_022023) do
     t.string "make"
     t.string "model"
     t.string "color"
-    t.string "wholesale_price"
+    t.float "wholesale_price"
     t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "quotes", "customers"
+  add_foreign_key "quotes", "users"
+  add_foreign_key "quotes", "vehicles"
 end

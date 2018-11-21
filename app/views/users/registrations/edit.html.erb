@@ -3,27 +3,26 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :first_name %><br />
+  <div class="field"><%= f.label :first_name %><br />
     <%= f.text_field :first_name, autofocus: true %></div>
 
-  <div><%= f.label :last_name %><br />
+  <div class="field"><%= f.label :last_name %><br />
     <%= f.text_field :last_name, autofocus: true %></div>
 
-  <div><%= f.label :phone %><br />
+  <div class="field"><%= f.label :phone %><br />
     <%= f.text_field :phone, autofocus: true %></div>
 
   <%= f.radio_button :is_female, '1' %> <%= f.label :is_female, "Female" %>
   <%= f.radio_button :is_female, '0' %> <%= f.label :is_female, "Male" %>
 
 
-  <div><%= f.label :date_of_birth %><br />
+  <div class="field"><%= f.label :date_of_birth %><br />
     <%= f.date_select :date_of_birth %></div>
 
 
-  <% if policy(Employee).new? %>
-  <div><%= f.label :role %><br />
-    <%= f.text_field :role, autofocus: true %></div>
-   <%end %>
+  <div class="field"><%= f.label :role %><br />
+    <%= f.select :role, options_for_select(["agent", "sales", "finance", "inventory"])%>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />

@@ -15,10 +15,10 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "New Quote"
 
     fill_in "Customer", with: @quote.customer_id
-    fill_in "Employee", with: @quote.employee_id
     fill_in "Markup", with: @quote.markup
     fill_in "Sales Tax", with: @quote.sales_tax
     fill_in "Total", with: @quote.total
+    fill_in "User", with: @quote.user_id
     fill_in "Vehicle", with: @quote.vehicle_id
     click_on "Create Quote"
 
@@ -31,10 +31,10 @@ class QuotesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Customer", with: @quote.customer_id
-    fill_in "Employee", with: @quote.employee_id
     fill_in "Markup", with: @quote.markup
     fill_in "Sales Tax", with: @quote.sales_tax
     fill_in "Total", with: @quote.total
+    fill_in "User", with: @quote.user_id
     fill_in "Vehicle", with: @quote.vehicle_id
     click_on "Update Quote"
 
