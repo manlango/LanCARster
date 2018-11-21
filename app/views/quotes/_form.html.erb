@@ -26,21 +26,6 @@
     <%= form.collection_select :user_id, User.all, :id, :email%>
   </div>
 
-  <div class="field">
-    <%= form.label :markup %>
-    <%= form.text_field :markup %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sales_tax %>
-    <%= form.text_field :sales_tax %>
-  </div>
-
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.text_field :total %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>

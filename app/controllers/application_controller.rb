@@ -10,10 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
 
-def index
-  @users =User.all
-end
-
+  def index
+    @users =User.all
+  end
 
   include Pundit
 

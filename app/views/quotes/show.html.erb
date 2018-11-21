@@ -2,7 +2,7 @@
 
 <p>
   <strong>Customer:</strong>
-  <%= @quote.customer %>
+  <%= @quote.customer.full_name %>
 </p>
 
 <p>
@@ -17,17 +17,17 @@
 
 <p>
   <strong>Markup:</strong>
-  <%= @quote.markup %>
+  $ <%= number_with_precision(@quote.markup, precision: 2) %>
 </p>
 
 <p>
   <strong>Sales tax:</strong>
-  <%= @quote.sales_tax %>
+  $ <%= number_with_precision(@quote.sales_tax, precision: 2) %>
 </p>
 
 <p>
   <strong>Total:</strong>
-  <%= @quote.total %>
+  $ <%= number_with_precision(@quote.total, precision: 2) %>
 </p>
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |

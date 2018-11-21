@@ -42,7 +42,7 @@ class QuotesController < ApplicationController
   # PATCH/PUT /quotes/1
   # PATCH/PUT /quotes/1.json
   def update
-    authorize @quotes
+    authorize @quote
     respond_to do |format|
       if @quote.update(quote_params)
         format.html { redirect_to @quote, notice: 'Quote was successfully updated.' }

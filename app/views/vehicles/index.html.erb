@@ -10,7 +10,7 @@
     <th>Make</th>
     <th>Model</th>
     <th>Color</th>
-    <th>Wholesale price</th>
+    <th>Price</th>
     <th>Image</th>
     <th colspan="3"></th>
   </tr>
@@ -24,7 +24,7 @@
       <td><%= vehicle.make %></td>
       <td><%= vehicle.model %></td>
       <td><%= vehicle.color %></td>
-      <td><%= vehicle.wholesale_price %></td>
+      <td>$ <%= number_with_precision(vehicle.wholesale_price, precision: 2) %></td>
       <td><%= vehicle.image_id %></td>
       <td><%= link_to 'Show', vehicle %> </td>
       <td><%= link_to 'Edit', edit_vehicle_path(vehicle)  if policy(Vehicle).edit? %> </td>
