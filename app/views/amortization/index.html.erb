@@ -1,0 +1,73 @@
+<h2>Welcome to the Financing Calculator</h2>
+<div class="field">
+<%= collection_select :vehicle, :vehicle_id, Vehicle.all, :id, :vin %>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th>Loan Data</th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <tr>
+    <td>Original Principal</td>
+    <td><%= @vehicle.vin %></td>
+  </tr>
+
+  <tr>
+    <td>Loan Term (Years)</td>
+    <td>This is where the years will go, implemented by a dropdown</td>
+  </tr>
+
+  <tr>
+    <td>Annual Interest Rate</td>
+    <td>This is where interest rate will go, entered by the manager</td>
+  </tr>
+
+  <tr>
+    <td>Payments per Year</td>
+    <td>This is where they get to specify the number of payments in a year, defaults to 12</td>
+  </tr>
+
+  <tr>
+    <td>Payment</td>
+    <td>This is where the monthly payment total will go</td>
+  </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Month</th>
+    <th>Beginning Balance</th>
+    <th>Payment</th>
+    <th>Interest</th>
+    <th>Cumulative Interest</th>
+    <th>Principal</th>
+    <th>Cumulative Principal</th>
+    <th>Ending Balance</th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <tr>
+
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+    <td>Placeholder</td>
+
+  </tr>
+  </tbody>
+</table>
