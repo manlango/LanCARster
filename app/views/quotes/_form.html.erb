@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+
+  <% if policy(Quote).info? %>
   <div class="field">
     <%= form.label :customer_id %>
     <%= form.collection_select :customer_id, Customer.all, :id, :full_name%>
@@ -26,20 +28,21 @@
     <%= form.collection_select :user_id, User.all, :id, :email%>
   </div>
 
-  <div class="field">
-    <%= form.label :markup %>
-    <%= form.text_field :markup %>
-  </div>
+<%end %>
 
-  <div class="field">
-    <%= form.label :sales_tax %>
-    <%= form.text_field :sales_tax %>
-  </div>
+  <% if policy(Quote).sold? %>
 
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.text_field :total %>
-  </div>
+
+    <div class="field">
+      <%= form.label :Status %><br/>
+      <%= form.select :sold, options_for_select(["Sold", "Pending"], "Pending")%>
+    </div>
+
+
+
+
+<%end %>
+
 
   <div class="actions">
     <%= form.submit %>
