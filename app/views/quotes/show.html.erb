@@ -11,11 +11,11 @@
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Agent Name:</strong>
+  <%= @quote.user.full_name%>
+  <strong>Agent Contact :</strong>
   <%= @quote.user.email %>
 </p>
-
-
 
 <p>
   <strong>Markup:</strong>
@@ -39,3 +39,4 @@
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
 <%= link_to 'Back', quotes_path %>
+

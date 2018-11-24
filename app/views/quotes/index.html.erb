@@ -4,37 +4,37 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Customer</th>
-      <th>Vehicle</th>
-      <th>User</th>
-      <th>Markup</th>
-      <th>Sales tax</th>
-      <th>Total</th>
-      <th>Sale Status</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Customer</th>
+    <th>Vehicle</th>
+    <th>User</th>
+    <th>Markup</th>
+    <th>Sales tax</th>
+    <th>Total</th>
+    <th>Sale Status</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @quotes.each do |quote| %>
-      <tr>
-        <td><%= quote.customer.full_name %></td>
-        <td><%= quote.vehicle.vin %></td>
-        <td><%= quote.user.email %></td>
-        <td>$ <%= number_with_precision(quote.markup, precision: 2) %></td>
-        <td>$ <%= number_with_precision(quote.sales_tax, precision: 2) %></td>
-        <td>$ <%= number_with_precision(quote.total, precision: 2) %></td>
-        <td><%= quote.sold %></td>
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
-      </tr>
-    <% end %>
+  <% @quotes.each do |quote| %>
+    <tr>
+      <td><%= quote.customer.full_name %></td>
+      <td><%= quote.vehicle.vin %></td>
+      <td><%= quote.user.email %></td>
+      <td>$ <%= number_with_precision(quote.markup, precision: 2) %></td>
+      <td>$ <%= number_with_precision(quote.sales_tax, precision: 2) %></td>
+      <td>$ <%= number_with_precision(quote.total, precision: 2) %></td>
+      <td><%= quote.sold %></td>
+      <td><%= link_to 'Show', quote %></td>
+      <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %></td>
+      <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 <% if policy(Quote).new? %>
-<%= link_to 'New Quote', new_quote_path %>
+  <%= link_to 'New Quote', new_quote_path %>
 <%end %>
