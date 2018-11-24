@@ -22,6 +22,8 @@ class ApplicationPolicy
     create?
   end
 
+
+
   def update?
     false
   end
@@ -47,6 +49,10 @@ class ApplicationPolicy
     end
 
     def resolve
+      scope
+    end
+
+    def resolve1?
       scope
     end
   end

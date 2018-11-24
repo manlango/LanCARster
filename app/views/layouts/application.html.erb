@@ -36,8 +36,13 @@
     <%= link_to "Customer Records", customers_path%>
         <%end %>
 
-
+      <% if policy(Quote).title1? %>
     <%= link_to "Quotes", quotes_path %>
+        <%end %>
+
+      <% if policy(Quote).title2? %>
+      <%= link_to "Sales", quotes_path %>
+        <%end %>
 
 
   <% else %>

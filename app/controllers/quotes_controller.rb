@@ -6,11 +6,13 @@ class QuotesController < ApplicationController
   def index
     @quotes = Quote.all
     authorize @quotes
+    @quotes = policy_scope(Quote)
   end
 
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+    @quote = policy_scope(Quote).find(params[:id])
   end
 
   # GET /quotes/new

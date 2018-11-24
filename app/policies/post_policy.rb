@@ -34,7 +34,6 @@ class PostPolicy < ApplicationPolicy
   end
 
 
-
   private
   def post
       record

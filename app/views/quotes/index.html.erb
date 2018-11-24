@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Quotes</h1>
+
+<% if policy(Quote).title1? %>
+  <h1>My Quotes</h1>
+  <%end %>
+
+<% if policy(Quote).title2? %>
+<h1>Sales</h1>
+<%end %>
+
+
+
 
 <table>
   <thead>
   <tr>
     <th>Customer</th>
     <th>Vehicle</th>
-    <th>User</th>
+    <th>Agent Contact</th>
     <th>Markup</th>
     <th>Sales tax</th>
     <th>Total</th>
@@ -17,8 +27,12 @@
   </thead>
 
   <tbody>
+
   <% @quotes.each do |quote| %>
+
+
     <tr>
+
       <td><%= quote.customer.full_name %></td>
       <td><%= quote.vehicle.vin %></td>
       <td><%= quote.user.email %></td>
@@ -27,10 +41,17 @@
       <td>$ <%= number_with_precision(quote.total, precision: 2) %></td>
       <td><%= quote.sold %></td>
       <td><%= link_to 'Show', quote %></td>
-      <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %></td>
+      <% if policy(Quote).new? %>
+      <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %> </td>
+        <%end %>
+      <td><%= link_to 'Update Sale Status', edit_quote_path(quote) if policy(quote).finances? %> </td>
       <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
     </tr>
-  <% end %>
+  <%end %>
+
+
+
+
   </tbody>
 </table>
 

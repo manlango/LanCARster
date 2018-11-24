@@ -1,11 +1,9 @@
 class QuotePolicy < ApplicationPolicy
 
 
-
-
   def index?
-     user.present?
 
+  user.present?
   end
 
 
@@ -14,21 +12,20 @@ class QuotePolicy < ApplicationPolicy
   end
 
 
-  def edit
+  def edit?
     user.present? && user.agent? || user.admin? || user.finance?
-
   end
 
 
   def update?
-    return true if user.present? && user.admin?
-    user.present? && user == quote.user
+    user.present? && user.agent? || user.admin? || user.finance?
+
 
   end
 
   def destroy?
-    return true if user.present? && user.admin?
-    user.present? && user == quote.user
+    user.present? && user.agent? || user.admin?
+
   end
 
   def new?
@@ -39,17 +36,40 @@ def sold?
  user.present? && user.finance?||user.admin?
 end
 
+  def title1?
+    user.present? && user.finance?||user.admin?||user.agent?
+  end
+
+  def title2?
+    user.sales?
+  end
 
   def info?
     user.present? && user.agent? || user.admin?
   end
 
+  def finances?
+    user.present? && user.finance?
+  end
 
+  class Scope < Scope
+    def resolve
+      if user.admin? || user.finance? || user.sales?
+          if user.admin? || user.agent? || user.finance?
+             scope.all
+          else
+             scope.where(sold: "Sold")
+          end
+      else  scope.where(user_id:user)
+      end
 
+end
 
-  private
-  def quote
+     private
+     def quote
     record
   end
 
-  end
+     end
+end
+
