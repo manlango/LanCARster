@@ -16,4 +16,6 @@ class Quote < ApplicationRecord
     update_columns(markup: markup_total, sales_tax: tax_total, total: total)
   end
 
+
+
 end

@@ -1,4 +1,8 @@
 class QuotePolicy < ApplicationPolicy
+
+
+
+
   def index?
      user.present?
 
@@ -32,7 +36,7 @@ class QuotePolicy < ApplicationPolicy
   end
 
 def sold?
- user.present? && user.finance?|| user.admin?
+ user.present? && user.finance?||user.admin?
 end
 
 
@@ -40,9 +44,12 @@ end
     user.present? && user.agent? || user.admin?
   end
 
+
+
+
   private
   def quote
     record
   end
 
-end
+  end

@@ -15,6 +15,8 @@
   <%= @quote.user.email %>
 </p>
 
+
+
 <p>
   <strong>Markup:</strong>
   $ <%= number_with_precision(@quote.markup, precision: 2) %>
@@ -28,6 +30,11 @@
 <p>
   <strong>Total:</strong>
   $ <%= number_with_precision(@quote.total, precision: 2) %>
+</p>
+
+<p>
+  <strong>Sale Status:</strong>
+  <%= @quote.sold %>
 </p>
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |

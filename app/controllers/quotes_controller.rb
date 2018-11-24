@@ -68,14 +68,30 @@ class QuotesController < ApplicationController
 
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_quote
-      @quote = Quote.find(params[:id])
-      authorize @quote
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_quote
+    @quote = Quote.find(params[:id])
+    authorize @quote
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def quote_params
-      params.require(:quote).permit(:customer_id, :vehicle_id, :user_id, :markup, :sales_tax, :total, :sold)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def quote_params
+    params.require(:quote).permit(:customer_id, :vehicle_id, :user_id, :markup, :sales_tax, :total, :sold)
+  end
 end
+
+
+
+
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_quote
+    @quote = Quote.find(params[:id])
+    authorize @quote
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def quote_params
+    params.require(:quote).permit(policy(@quote).permitted_attributes)
+  end
+

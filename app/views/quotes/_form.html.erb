@@ -35,13 +35,10 @@
 
     <div class="field">
       <%= form.label :Status %><br/>
-      <%= form.select :sold, options_for_select(["Sold", "Pending"], "Pending")%>
+      <%= form.select :sold, ['Pending','Sold'], :selected => 'Pending' %>
     </div>
 
-
-
-
-<%end %>
+  <%end %>
 
   <div class="actions">
     <%= form.submit %>
