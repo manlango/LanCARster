@@ -13,7 +13,8 @@
 
 
   <% if user_signed_in? %>
-  <%= current_user.email %>
+ <h3> You are currently signed-in as: <%= current_user.full_name %>,
+ </h3> <p>  privilege level: ( <%= current_user.role%>)</p>
       <%= link_to "Home", root_url %>
 
       <% if policy(User).new? %>
