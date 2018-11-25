@@ -30,10 +30,13 @@
   <%= @vehicle.wholesale_price %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @vehicle.image_id %>
+
 </p>
+
+<%= image_tag url_for(@vehicle.cover_photo),:size => '600x400' %>
+
+<p>                                         </p>
+
 
 <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
 <%= link_to 'Back', vehicles_path %>
