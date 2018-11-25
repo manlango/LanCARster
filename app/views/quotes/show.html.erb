@@ -37,6 +37,13 @@
   <%= @quote.sold %>
 </p>
 
+<p>
+
+<%= image_tag @quote.vehicle.cover_photo,:size => '600x400' %>
+
+</p>
+
+
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
 <%= link_to 'Back', quotes_path %>
 

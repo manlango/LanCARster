@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead248e2-56a4-4958-a6e6-59b061bd15df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/direct_upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/direct_upload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1b2dc758-ab53-42ab-be19-28bcc094ceca.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1b2dc758-ab53-42ab-be19-28bcc094ceca.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1b2dc758-ab53-42ab-be19-28bcc094ceca/storage_v2/_src_/database/ruby4339_finalproject_development.H9afjg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1b2dc758-ab53-42ab-be19-28bcc094ceca/storage_v2/_src_/database/ruby4339_finalproject_development.H9afjg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/vehicles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/vehicles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/vehicle.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/vehicle.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/vehicles/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/vehicles/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/vehicles/_vehicle.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/vehicles/_vehicle.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/vehicles/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/vehicles/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/vehicles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/vehicles/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/quotes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/quotes/show.html.erb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +169,7 @@
         <counts>
           <entry key="Gemfile" value="4" />
           <entry key="css" value="1" />
-          <entry key="erb" value="144" />
+          <entry key="erb" value="145" />
           <entry key="jbuilder" value="21" />
           <entry key="js" value="1" />
           <entry key="quotes" value="1" />
@@ -196,7 +185,7 @@
           <entry key="Database Element" value="1" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="RHTML" value="144" />
+          <entry key="RHTML" value="145" />
           <entry key="Ruby" value="187" />
           <entry key="Scratch" value="3" />
           <entry key="YAML" value="4" />
@@ -205,7 +194,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Gemfile" value="41" />
-          <entry key="erb" value="3291" />
+          <entry key="erb" value="3351" />
           <entry key="jbuilder" value="15" />
           <entry key="rb" value="3169" />
           <entry key="sql" value="11" />
@@ -216,7 +205,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="33" />
-          <entry key="RHTML" value="3290" />
+          <entry key="RHTML" value="3350" />
           <entry key="RegExp" value="1" />
           <entry key="Ruby" value="3225" />
           <entry key="Scratch" value="11" />
@@ -295,15 +284,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/vehicles/_vehicle.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="82" selection-start-column="82" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -317,11 +297,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/vehicles/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="329">
+              <caret line="34" lean-forward="true" selection-start-line="33" selection-end-line="37" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/quotes/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -396,8 +385,6 @@
         <option value="$PROJECT_DIR$/app/views/users/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/quote.rb" />
         <option value="$PROJECT_DIR$/app/models/quote.rb" />
-        <option value="$PROJECT_DIR$/app/views/quotes/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/quotes/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/quotes_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/quotes_controller.rb" />
         <option value="$PROJECT_DIR$/app/policies/user_policy.rb" />
@@ -415,6 +402,8 @@
         <option value="$PROJECT_DIR$/app/views/vehicles/_vehicle.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/vehicles/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vehicles/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/quotes/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/quotes/show.html.erb" />
       </list>
     </option>
   </component>
@@ -430,8 +419,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
+    <option name="x" value="751" />
+    <option name="width" value="1178" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
@@ -563,6 +552,13 @@
               <item name="Some_App" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="quotes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ruby4339_finalproject" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Some_App" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="vehicles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
@@ -576,7 +572,7 @@
     <property name="SearchEverywhereHistoryKey" value="rou&#9;FILE&#9;file://C:/Users/marin/Some_App/config/routes.rb&#10;routes&#9;FILE&#9;file://C:/Users/marin/Some_App/config/routes.rb&#10;rout&#9;FILE&#9;file://C:/Users/marin/Some_App/config/routes.rb&#10;admi&#9;null&#9;null&#10;ADMIN&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543118648778" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543119341317" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -625,12 +621,12 @@
       <workItem from="1542835065229" duration="5546000" />
       <workItem from="1542856708408" duration="3381000" />
       <workItem from="1543029842342" duration="41333000" />
-      <workItem from="1543116285028" duration="2362000" />
+      <workItem from="1543116285028" duration="3025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48472000" />
+    <option name="totallyTimeSpent" value="49135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="762" y="0" width="781" height="830" extended-state="0" />
@@ -641,7 +637,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50183153" side_tool="true" weight="0.17919463" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4981685" visible="true" weight="0.22191401" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.4981685" visible="true" weight="0.4216366" />
       <window_info id="Structure" order="6" sideWeight="0.50183153" side_tool="true" weight="0.17919463" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.24281609" />
@@ -723,13 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/quotes/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -957,8 +946,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/vehicles/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="329">
+          <caret line="34" lean-forward="true" selection-start-line="33" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/quotes/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
         </state>
       </provider>
     </entry>
