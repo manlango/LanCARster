@@ -46,7 +46,7 @@
       <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %> </td>
         <%end %>
       <td><%= link_to 'Update Sale Status', edit_quote_path(quote) if policy(quote).finances? %> </td>
-      <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
+      <td><%= link_to 'Delete', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
     </tr>
   <%end %>
 

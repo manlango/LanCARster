@@ -33,7 +33,7 @@
       <td> <%=  image_tag url_for(vehicle.cover_photo), :size => '90x80'%></td>
       <td><%= link_to 'Show', vehicle %> </td>
       <td><%= link_to 'Edit', edit_vehicle_path(vehicle)  if policy(Vehicle).edit? %> </td>
-      <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' }  if policy(Vehicle).destroy? %> </td>
+      <td><%= link_to 'Delete', vehicle, method: :delete, data: { confirm: 'Are you sure?' }  if policy(Vehicle).destroy? %> </td>
 
     </tr>
 
