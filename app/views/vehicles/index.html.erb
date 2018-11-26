@@ -2,6 +2,11 @@
 
 <h1>Vehicles</h1>
 
+<%= form_tag(vehicles_path, method: :get) do %>
+  Find a Vehicle By Model <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+<p>
 <table>
   <thead>
   <tr>

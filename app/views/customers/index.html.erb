@@ -2,6 +2,13 @@
 
 <h1>Customers</h1>
 
+<%= form_tag(customers_path, method: :get) do %>
+  Find a Customer By Last Name <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+<p>
+
+                                                          </p>
 <table>
   <thead>
     <tr>

@@ -7,6 +7,7 @@ class QuotesController < ApplicationController
     @quotes = Quote.all
     authorize @quotes
     @quotes = policy_scope(Quote)
+
   end
 
   # GET /quotes/1

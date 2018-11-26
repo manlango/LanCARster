@@ -18,4 +18,5 @@ class Quote < ApplicationRecord
 
 
 
-end
+  end
+

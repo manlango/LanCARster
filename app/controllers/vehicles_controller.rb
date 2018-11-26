@@ -5,6 +5,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles.json
   def index
     @vehicles = Vehicle.all
+    @vehicles = Vehicle.search(params[:term])
     authorize @vehicles
   end
 
@@ -74,6 +75,6 @@ class VehiclesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def vehicle_params
-    params.require(:vehicle).permit(:vin, :year, :make, :model, :color, :wholesale_price, :cover_photo)
+    params.require(:vehicle).permit(:vin, :year, :make, :model, :color, :wholesale_price, :cover_photo, :term)
   end
 end
