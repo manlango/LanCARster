@@ -5,6 +5,7 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
+    @customers = Customer.search(params[:term])
     authorize @customers
   end
 
@@ -73,6 +74,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:gender, :first_name, :last_name, :address, :email, :phone)
+      params.require(:customer).permit(:gender, :first_name, :last_name, :address, :email, :phone, :term)
     end
 end

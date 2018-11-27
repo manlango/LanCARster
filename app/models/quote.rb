@@ -27,4 +27,5 @@ class Quote < ApplicationRecord
     "#{vehicle.vin} - #{vehicle.color} #{vehicle.make} #{vehicle.model}, #{vehicle.year}: $ #{total.round(2)}"
   end
 
-end
+  end
+

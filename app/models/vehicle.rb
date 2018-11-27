@@ -11,4 +11,12 @@ class Vehicle < ApplicationRecord
     total = wholesale_price + markup_total + tax_total
     "#{vin} - #{color} #{make} #{model}, #{year}: $ #{total.round(2)}"
   end
+
+  def self.search(term)
+    if term
+      where('model iLIKE ?', "%#{term}%").order('id DESC')
+    else
+      order('id DESC')
+    end
+  end
 end

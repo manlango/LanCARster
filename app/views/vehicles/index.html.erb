@@ -2,6 +2,11 @@
 
 <h1>Vehicles</h1>
 
+<%= form_tag(vehicles_path, method: :get) do %>
+  Find a Vehicle By Model <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+<p>
 <table>
   <thead>
   <tr>
@@ -28,7 +33,7 @@
       <td> <%=  image_tag url_for(vehicle.cover_photo), :size => '90x80'%></td>
       <td><%= link_to 'Show', vehicle %> </td>
       <td><%= link_to 'Edit', edit_vehicle_path(vehicle)  if policy(Vehicle).edit? %> </td>
-      <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' }  if policy(Vehicle).destroy? %> </td>
+      <td><%= link_to 'Delete', vehicle, method: :delete, data: { confirm: 'Are you sure?' }  if policy(Vehicle).destroy? %> </td>
 
     </tr>
 
