@@ -1,0 +1,64 @@
+<table>
+  <thead>
+  <tr>
+    <th>Loan Data</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Original Principal</td>
+      <td>$ <%= number_with_precision(@quotes_select.total, precision: 2) %></td>
+    </tr>
+
+    <tr>
+      <td>Loan Term (Years)</td>
+      <td><%= @years_select %></td>
+    </tr>
+
+    <tr>
+      <td>Annual Interest Rate</td>
+      <td><%= @rates_select %>%</td>
+    </tr>
+
+    <tr>
+      <td>Payment</td>
+      <td>$ <%= number_with_precision(@payment_result, precision: 2) %></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <br>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Month</th>
+      <th>Beginning Balance</th>
+      <th>Payment</th>
+      <th>Interest</th>
+      <th>Cumulative Interest</th>
+      <th>Principal</th>
+      <th>Cumulative Principal</th>
+      <th>Ending Balance</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+      <% @amortization_table.each do |field| %>
+      <tr>
+        <td><%= field[:period] %></td>
+        <td><%= field[:beginning_balance].round(2) %></td>
+        <td><%= field[:payment].round(2) %></td>
+        <td><%= field[:interest_portion].round(2) %></td>
+        <td><%= field[:sum_interest].round(2) %></td>
+        <td><%= field[:principal_portion].round(2) %></td>
+        <td><%= field[:sum_principal].round(2) %></td>
+        <td><%= field[:ending_balance].round(2) %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<h2>Welcome to the Financial Report</h2>
+
+<%= form_tag(report_index_path, :method => :post) do %>
+  <div class="field">
+    <%= label_tag(:quote, "Quote:") %>
+    <%= select_tag :id, options_from_collection_for_select(Quote.all, :id, :vehicle_desc),
+                   {:class=>'form-control', :prompt => 'Select Quote'}  %>
+  </div>
+
+  <div class="field">
+    <p><%= label_tag(:loan_year, "Loan Years: ") %></p>
+    <p><%= number_field_tag(:years, nil, in: 3..5) %></p>
+  </div>
+
+  <div class="field">
+    <p><%= label_tag(:interest, "Annual Interest Rate: ") %></p>
+    <p><%= number_field_tag(:rates, nil, in: 1.0..20.0) %>%</p>
+  </div>
+
+  <%= submit_tag("Generate Financial Report") %>
+<% end %>

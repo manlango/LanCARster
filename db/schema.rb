@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_022059) do
     t.string "model"
     t.string "color"
     t.float "wholesale_price"
+    t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cover_photo"

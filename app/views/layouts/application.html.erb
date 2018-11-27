@@ -14,7 +14,7 @@
 
   <% if user_signed_in? %>
  <h3> You are currently signed-in as: <%= current_user.full_name %>,
- </h3> <p>  privilege level: ( <%= current_user.role%>)</p>
+ </h3> <p>  privilege level: (<%= current_user.role%>)</p>
       <%= link_to "Home", root_url %>
 
       <% if policy(User).new? %>
@@ -28,7 +28,7 @@
         <%= link_to "Roles", departments_path %>
       <% end %>
 
-    <%= link_to "Financial Calculator", amortization_path %>
+    <%= link_to "Financial Report", report_index_path %>
 
 
 

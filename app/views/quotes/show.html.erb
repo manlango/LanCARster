@@ -18,6 +18,10 @@
 </p>
 
 <p>
+  <strong>MSRP:</strong>
+  $ <%= number_with_precision(@quote.vehicle.wholesale_price, precision: 2) %>
+</p>
+<p>
   <strong>Markup:</strong>
   $ <%= number_with_precision(@quote.markup, precision: 2) %>
 </p>

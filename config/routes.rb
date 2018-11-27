@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  resources :quotes
+  devise_for :users, :path_prefix => 'd'
   get 'users/index'
+  resources :quotes
   resources :customers
   resources :departments
   resources :vehicles
   resources :posts
-  devise_for :users, :path_prefix => 'd'
   resources :users
   root 'home#index'
   match '/users',   to: 'users#index',   via: 'get'
-  get '/amortization' => 'amortization#index', as: 'amortization'
+  get 'report/index', to: "report#index"
+  post 'report/index', to: "report#generate_report"
+  resources :reports
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
