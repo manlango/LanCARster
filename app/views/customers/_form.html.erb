@@ -10,38 +10,40 @@
       </ul>
     </div>
   <% end %>
-
+<div class="form">
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
-  </div>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.label :gender, class:"labels" %>
+   <%= form.text_field :gender, class:"fields" %>
   </div>
 
   <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <%= form.label :first_name, class:"labels" %>
+    <%= form.text_field :first_name,class:"fields"  %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.label :last_name, class:"labels" %>
+    <%= form.text_field :last_name,class:"fields"  %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.label :address, class:"labels" %>
+    <%= form.text_field :address,class:"fields"  %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+    <%= form.label :email, class:"labels" %>
+    <%= form.text_field :email,class:"fields"  %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="field">
+    <%= form.label :phone, class:"labels" %>
+    <%= form.text_field :phone ,class:"fields" %>
   </div>
+
+  <div class="send">
+    <%= form.submit   %>
+  </div>
+</div>
 <% end %>

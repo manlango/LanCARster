@@ -1,34 +1,86 @@
 <p id="notice"><%= notice %></p>
 
+
+</div class= "show">
+<table id ="customers" , align="center">
+  <thead>
+  <tr>
+
+
 <p>
+  <td>
   <strong>Gender:</strong>
+  </td>
+    <td>
   <%= @customer.gender %>
+  </td>
 </p>
 
+  </tr>
+  <tr>
 <p>
+  <td>
   <strong>First name:</strong>
+  </td>
+    <td>
   <%= @customer.first_name %>
+    </td>
 </p>
+  </tr>
 
+  <tr>
 <p>
+  <td>
   <strong>Last name:</strong>
+  </td>
+    <td>
   <%= @customer.last_name %>
+    </td>
 </p>
+  </tr>
+
+  <tr>
 
 <p>
+  <td>
   <strong>Address:</strong>
+  </td>
+    <td>
   <%= @customer.address %>
+    </td>
 </p>
+  </tr>
+
+  <tr>
 
 <p>
+  <td>
   <strong>Email:</strong>
+  </td>
+    <td>
   <%= @customer.email %>
+    </td>
 </p>
+  </tr>
+
+  <tr>
 
 <p>
+  <td>
   <strong>Phone:</strong>
+  </td>
+  <td>
   <%= @customer.phone %>
+  </td>
 </p>
+  </tr>
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+</table>
+</div>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer), class:"submit" %> |
+<%= link_to 'Back', customers_path , class:"submit"%>
+
+
+

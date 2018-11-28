@@ -1,59 +1,92 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SomeApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<head>
 
-  </head>
-  <div class="navbar">
+  <title>SomeApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+</head>
+
+<body>
+<div class="navbar">
+
+<div class ="usertitle">
   <% if user_signed_in? %>
- <h3> You are currently signed-in as: <%= current_user.full_name %>,
- </h3> <p>  privilege level: (<%= current_user.role%>)</p>
-      <%= link_to "Home", root_url %>
+    <p> You are currently signed-in as: <%= current_user.full_name %>,</p>
+     <p>  privilege level: ( <%= current_user.role%>)</p>
+    </div>
+   <ul>
 
-      <% if policy(User).new? %>
-      <%= link_to "Manage Users", users_path %>
+
+
+
+      <li>
+        <%= link_to "Home", root_url %>
+      </li>
+
+      <li>
+        <% if policy(User).new? %>
+          <%= link_to "Manage Users", users_path %>
         <%end %>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <%= link_to "Edit profile", edit_user_registration_path %>
+      </li>
 
+      <li>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      </li>
 
-      <% if policy(Department).new? %>
-        <%= link_to "Roles", departments_path %>
-      <% end %>
+      <li>
+        <%= link_to "Edit profile", edit_user_registration_path %>
+      </li>
 
-    <%= link_to "Financial Report", report_index_path %>
+      <li>
 
+        <% if policy(Department).new? %>
+          <%= link_to "Roles", departments_path %>
+        <% end %>
+      </li>
 
+      <li>
+        <%= link_to "Financial Report", report_index_path %>
+      </li>
 
-      <% if policy(Customer).new? %>
-    <%= link_to "Customer Records", customers_path%>
+      <li>
+        <% if policy(Customer).new? %>
+          <%= link_to "Customer Records", customers_path%>
         <%end %>
+      </li>
 
-      <% if policy(Quote).title1? %>
-    <%= link_to "Quotes", quotes_path %>
+      <li>
+        <% if policy(Quote).title1? %>
+          <%= link_to "Quotes", quotes_path %>
         <%end %>
+      </li>
 
-      <% if policy(Quote).title2? %>
-      <%= link_to "Sales", quotes_path %>
+      <li>
+        <% if policy(Quote).title2? %>
+          <%= link_to "Sales", quotes_path %>
         <%end %>
-
+      </li>
 
   <% else %>
-    <%= link_to "Sign Up", new_user_registration_path %>
-    <%= link_to "Login", new_user_session_path %>
+    <%= link_to "Sign Up", new_user_registration_path, class:"submit" %>
+    <%= link_to "Login", new_user_session_path, class:"submit" %>
   <% end %>
 
-    <% if policy(Customer).new? %>
-    <%= link_to "Vehicle Catalogue", vehicles_path %>
-  </div>
-      <%end %>
-    <%= yield %>
+  <% if policy(Customer).new? %>
+    <li>
+      <%= link_to "Vehicle Catalogue", vehicles_path %>
+    </li>
+    </div>
+    </div>
+  <%end %>
+
+  </ul>
+  <%= yield %>
+
   </body>
-</html>
+
+  </html>
