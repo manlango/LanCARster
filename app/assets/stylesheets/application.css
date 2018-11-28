@@ -115,13 +115,10 @@ body::after {
 }
 
 .form{
-    text-align: center;
-    padding: 10px;
     margin: auto;
-    width: 100%;
-    background:white;
-
-    padding-top: 10%;
+    width: 50%;
+    border: 3px red;
+    padding: 10px;
 }
 
 .labels{
@@ -163,4 +160,13 @@ body::after {
 
 .submit:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.text-box{
+    padding-left:4em;
+    color: black;
+}
+
+.send{
+    padding-right:4em;
 }

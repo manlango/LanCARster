@@ -11,39 +11,40 @@
     </div>
   <% end %>
 <div class="form">
-  <div class="field">
 
-    <%= form.label :gender, class:"labels" %>
-   <%= form.text_field :gender, class:"fields" %>
+  <div class="field">
+    <p class = "text-box ">  <%= form.label :gender, class:"labels" %>
+     <%= form.text_field :gender, class:"fields" %></p>
   </div>
 
   <div class="field">
-    <%= form.label :first_name, class:"labels" %>
-    <%= form.text_field :first_name,class:"fields"  %>
+    <p class = "text-box ">  <%= form.label :first_name, class:"labels" %>
+     <%= form.text_field :first_name,class:"fields"  %></p>
   </div>
 
   <div class="field">
-    <%= form.label :last_name, class:"labels" %>
-    <%= form.text_field :last_name,class:"fields"  %>
+    <p class = "text-box "> <%= form.label :last_name, class:"labels" %>
+    <%= form.text_field :last_name,class:"fields"  %></p>
   </div>
 
   <div class="field">
-    <%= form.label :address, class:"labels" %>
-    <%= form.text_field :address,class:"fields"  %>
+    <p class = "text-box ">   <%= form.label :address, class:"labels" %>
+      <%= form.text_field :address,class:"fields"  %></p>
   </div>
 
   <div class="field">
-    <%= form.label :email, class:"labels" %>
-    <%= form.text_field :email,class:"fields"  %>
+    <p class = "text-box ">   <%= form.label :email, class:"labels" %>
+      <%= form.text_field :email,class:"fields"  %></p>
   </div>
 
   <div class="field">
-    <%= form.label :phone, class:"labels" %>
-    <%= form.text_field :phone ,class:"fields" %>
+    <p class = "text-box ">   <%= form.label :phone, class:"labels" %>
+      <%= form.text_field :phone ,class:"fields" %></p>
   </div>
 
   <div class="send">
-    <%= form.submit   %>
+    <p>  <%= form.submit 'Submit', :class => 'submit'%> </p>
   </div>
+
 </div>
 <% end %>
