@@ -1,13 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Vehicles</h1>
+<div class="elements" >
+
+  <div class="title">
+    <h1> Vehicles</h1>
+  </div>
+
+  <id class="border">
+  <% if policy(Vehicle).new? %>
+    <%= link_to 'New Vehicle', new_vehicle_path, class:"button" %>
+  <%end %>
+  </id>
 
 <%= form_tag(vehicles_path, method: :get) do %>
-  Find a Vehicle By Model <%= text_field_tag :term, params[:term] %>
-  <%= submit_tag 'Search', name: nil %>
+  <%= text_field_tag :term, params[:term],class: "search" , placeholder: 'Search by Model...' %>
+  <%= submit_tag 'Search', name: nil, class:"submit" %>
 <% end %>
-<p>
-<table>
+
+</div>
+<table id ="customers" , align="center">
+
   <thead>
   <tr>
     <th>Vin</th>
@@ -17,7 +29,7 @@
     <th>Color</th>
     <th>Price</th>
     <th>Image</th>
-    <th colspan="3"></th>
+    <th colspan="3"> Actions</th>
   </tr>
   </thead>
 
@@ -31,9 +43,9 @@
       <td><%= vehicle.color %></td>
       <td>$ <%= number_with_precision(vehicle.wholesale_price, precision: 2) %></td>
       <td> <%=  image_tag url_for(vehicle.cover_photo), :size => '90x80'%></td>
-      <td><%= link_to 'Show', vehicle %> </td>
-      <td><%= link_to 'Edit', edit_vehicle_path(vehicle)  if policy(Vehicle).edit? %> </td>
-      <td><%= link_to 'Delete', vehicle, method: :delete, data: { confirm: 'Are you sure?' }  if policy(Vehicle).destroy? %> </td>
+      <td><%= link_to 'Show', vehicle , class:"action"%> </td>
+      <td><%= link_to 'Edit', edit_vehicle_path(vehicle), class:"action"  if policy(Vehicle).edit? %> </td>
+      <td><%= link_to 'Delete', vehicle, method: :delete, data: { confirm: 'Are you sure?' }, class:"action"  if policy(Vehicle).destroy? %> </td>
 
     </tr>
 
@@ -41,8 +53,6 @@
   </tbody>
 </table>
 
-<br>
 
-<% if policy(Vehicle).new? %>
-  <%= link_to 'New Vehicle', new_vehicle_path %>
-<%end %>
+
+

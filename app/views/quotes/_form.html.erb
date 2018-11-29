@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
+  <div class="form">
 
   <% if policy(Quote).info? %>
     <div class="field">
-      <%= form.label :customer_id %>
-      <%= form.collection_select :customer_id, Customer.all, :id, :full_name%>
+      <p class = "text-box ">  <%= form.label :customer_id, class:"labels" %>
+        <%=  form.collection_select :customer_id, Customer.all, :id, :full_name, { include_blank: false }, {class:"fields" } %></p>
     </div>
 
-    <div class="field">
-      <%= form.label :vehicle_id %>
-      <%= form.collection_select :vehicle_id, Vehicle.all, :id, :vin%>
-    </div>
+      <div class="field">
+      <p class = "text-box ">  <%= form.label :vehicle_id, class:"labels" %>
+        <%= form.collection_select :vehicle_id, Vehicle.all, :id, :vin, { include_blank: false }, {class:"fields" } %></p>
+      </div>
 
-    <div class="field">
-      <%= form.label :Agent %>
-      <%= form.collection_select :user_id, User.all, :id, :full_name%>
-    </div>
+      <div class="field">
+      <p class = "text-box "> <%= form.label :Agent, class:"labels" %>
+        <%= form.collection_select :user_id, User.all, :id, :full_name,{ include_blank: false }, {class:"fields" }%></p>
+      </div>
+
 
   <%end %>
 
@@ -34,13 +36,13 @@
 
 
     <div class="field">
-      <%= form.label :Status %><br/>
-      <%= form.select :sold, ['Pending','Sold'], :selected => 'Pending' %>
+   <p class="text-box" >  <%= form.label :Status, class:"labels" %><br/>
+     <%= form.select :sold, ['Pending','Sold'], :selected => 'Pending',:class => 'submit'  %> </p>
     </div>
 
   <%end %>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="send">
+      <p>  <%= form.submit 'Submit', :class => 'submit'%> </p>
+    </div>
+</div>
 <% end %>

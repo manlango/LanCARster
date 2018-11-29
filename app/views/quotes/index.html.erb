@@ -1,21 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 
+
+<div class="elements" >
+
 <% if policy(Quote).title1? %>
+    <div class="title">
   <h1>My Quotes</h1>
+    </div>
   <%end %>
 
 <% if policy(Quote).title2? %>
+    <div class="title">
 <h1>Sales</h1>
+    </div>
 <%end %>
 
 
-<p>
+  <id class="border">
+
+  <% if policy(Quote).new? %>
+    <%= link_to 'New Quote', new_quote_path, class:"button" %>
+  <%end %>
+  </id>
 
 
-<table>
-  <thead>
-  <tr>
+
+  </div>
+
+  <table id ="customers" , align="center">
+    <thead>
+    <tr>
+
     <th>Customer</th>
     <th>Vehicle</th>
     <th>Agent Contact</th>
@@ -24,7 +40,7 @@
     <th>Sales tax</th>
     <th>Total</th>
     <th>Sale Status</th>
-    <th colspan="3"></th>
+      <th colspan="3"> Actions</th>
   </tr>
   </thead>
 
@@ -43,22 +59,14 @@
       <td>$ <%= number_with_precision(quote.sales_tax, precision: 2) %></td>
       <td>$ <%= number_with_precision(quote.total, precision: 2) %></td>
       <td><%= quote.sold %></td>
-      <td><%= link_to 'Show', quote %></td>
+      <td><%= link_to 'Show', quote, class:"action"%></td>
       <% if policy(Quote).new? %>
-      <td><%= link_to 'Edit', edit_quote_path(quote) if policy(quote).edit? %> </td>
-        <%end %>
-      <td><%= link_to 'Update Sale Status', edit_quote_path(quote) if policy(quote).finances? %> </td>
-      <td><%= link_to 'Delete', quote, method: :delete, data: { confirm: 'Are you sure?' } if policy(quote).destroy? %></td>
+      <td><%= link_to 'Edit', edit_quote_path(quote), class:"action"  if policy(quote).edit? %> </td><%end %>
+      <td><%= link_to 'Update Sale Status', edit_quote_path(quote), class:"action"  if policy(quote).finances? %> </td>
+      <td><%= link_to 'Delete', quote, method: :delete, data: { confirm: 'Are you sure?' }, class:"action"  if policy(quote).destroy? %></td>
     </tr>
   <%end %>
-
-
-
 
   </tbody>
 </table>
 
-<br>
-<% if policy(Quote).new? %>
-  <%= link_to 'New Quote', new_quote_path %>
-<%end %>

@@ -1,53 +1,131 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Customer:</strong>
-  <%= @quote.customer.full_name %>
-</p>
 
-<p>
-  <strong>Vehicle:</strong>
-  <%= @quote.vehicle.vin %>
-</p>
-
-<p>
-  <strong>Agent Name:</strong>
-  <%= @quote.user.full_name%>
-  <strong>Agent Contact :</strong>
-  <%= @quote.user.email %>
-</p>
-
-<p>
-  <strong>MSRP:</strong>
-  $ <%= number_with_precision(@quote.vehicle.wholesale_price, precision: 2) %>
-</p>
-<p>
-  <strong>Markup:</strong>
-  $ <%= number_with_precision(@quote.markup, precision: 2) %>
-</p>
-
-<p>
-  <strong>Sales tax:</strong>
-  $ <%= number_with_precision(@quote.sales_tax, precision: 2) %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  $ <%= number_with_precision(@quote.total, precision: 2) %>
-</p>
-
-<p>
-  <strong>Sale Status:</strong>
-  <%= @quote.sold %>
-</p>
-
-<p>
-
-<%= image_tag @quote.vehicle.cover_photo,:size => '600x400' %>
-
-</p>
+</div class= "show">
+<table id ="customers" , align="center">
+  <thead>
+  <tr>
 
 
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>
 
+    <p>
+    <td>
+      <strong>Customer:</strong>
+    </td>
+    <td>
+      <%= @quote.customer.full_name %>
+    </td>
+    </p>
+  </tr>
+
+<tr>
+    <p>
+    <td>
+      <strong>Vehicle :</strong>
+    </td>
+    <td>
+      <%= @quote.vehicle.vin %>
+    </td>
+    </p>
+</tr>
+
+  <tr>
+
+    <p>
+    <td>
+      <strong>Agent Name:</strong>
+    </td>
+    <td>
+      <%= @quote.user.full_name %>
+    </td>
+    </p>
+
+  </tr>
+  <tr>
+    <p>
+    <td>
+      <strong>Agent Email:</strong>
+    </td>
+    <td>
+      <%= @quote.user.email %>
+    </td>
+    </p>
+  </tr>
+
+  <tr>
+    <p>
+    <td>
+      <strong>MSRP:</strong>
+    </td>
+    <td>
+      $ <%= number_with_precision(@quote.vehicle.wholesale_price, precision: 2) %>
+    </td>
+
+    </p>
+  </tr>
+
+<tr>
+
+  <tr>
+
+    <p>
+    <td>
+      <strong>Markup:</strong>
+    </td>
+    <td>
+      $ <%= number_with_precision(@quote.markup, precision: 2) %>
+    </td>
+    </p>
+  </tr>
+
+<tr>
+    <p>
+    <td>
+      <strong>Sales tax:</strong>
+    </td>
+    <td>
+      $ <%= number_with_precision(@quote.sales_tax, precision: 2) %>
+    </td>
+    </p>
+</tr>
+
+  <tr>
+
+    <p>
+
+    <td>
+      <strong>MSRP:</strong>
+    </td>
+    <td>
+      $ <%= number_with_precision(@quote.vehicle.wholesale_price, precision: 2) %>
+    </td>
+    </p>
+  </tr>
+
+  <tr>
+
+    <p>
+    <td>
+      <strong>Sale Status :</strong>
+    </td>
+    <td>
+      <%= @quote.sold %>
+    </td>
+    </p>
+
+  </tr>
+</table>
+</div>
+
+
+
+
+<table>
+  <tr>
+    <%= link_to 'Edit', edit_quote_path(@quote),class:"submit" %> |
+    <%= link_to 'Back', quotes_path, class:"submit" %>
+    <p class="picture"><%= image_tag @quote.vehicle.cover_photo,:size => '600x300' %></p>
+
+  </tr>
+
+</table>

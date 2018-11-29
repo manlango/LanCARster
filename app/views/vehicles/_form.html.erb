@@ -10,43 +10,50 @@
       </ul>
     </div>
   <% end %>
+  <div class="form">
 
-  <div class="field">
-    <%= form.label :vin %>
-    <%= form.text_field :vin %>
-  </div>
+    <div class="field">
+      <p class = "text-box ">  <%= form.label :vin, class:"labels" %>
+        <%= form.text_field :vin, class:"fields" %></p>
+    </div>
 
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.number_field :year %>
-  </div>
 
-  <div class="field">
-    <%= form.label :make %>
-    <%= form.text_field :make %>
-  </div>
+    <div class="field">
+      <p class = "text-box ">  <%= form.label :year, class:"labels" %>
+        <%= form.text_field :year, class:"fields" %></p>
+    </div>
 
-  <div class="field">
-    <%= form.label :model %>
-    <%= form.text_field :model %>
-  </div>
+    <div class="field">
+      <p class = "text-box ">  <%= form.label :make, class:"labels" %>
+        <%= form.text_field :make,class:"fields"  %></p>
+    </div>
 
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.text_field :color %>
-  </div>
 
-  <div class="field">
-    <%= form.label :wholesale_price %>
-    <%= form.text_field :wholesale_price %>
-  </div>
+    <div class="field">
+      <p class = "text-box ">  <%= form.label :model, class:"labels" %>
+        <%= form.text_field :model,class:"fields"  %></p>
+    </div>
 
-  <div class="field">
-    <%= form.label :cover_photo %>
-    <%= form.file_field :cover_photo, direct_upload: true %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="field">
+      <p class = "text-box ">  <%= form.label :color, class:"labels" %>
+        <%= form.text_field :color,class:"fields"  %></p>
+    </div>
+
+
+    <div class="field">
+      <p class = "text-box ">  <%= form.label :wholesale_price, class:"labels" %>
+        <%= form.text_field :wholesale_price, class:"fields"  %></p>
+    </div>
+
+    <div class="field">
+      <p class = "text-box "> <%= form.label :cover_photo %>
+      <%= form.file_field :cover_photo, direct_upload: true %></p>
+    </div>
+
+    <div class="send">
+      <p>  <%= form.submit 'Submit', :class => 'submit'%> </p>
+    </div>
+
   </div>
 <% end %>

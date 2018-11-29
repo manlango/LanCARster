@@ -1,42 +1,95 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Vin:</strong>
-  <%= @vehicle.vin %>
-</p>
-
-<p>
-  <strong>Year:</strong>
-  <%= @vehicle.year %>
-</p>
-
-<p>
-  <strong>Make:</strong>
-  <%= @vehicle.make %>
-</p>
-
-<p>
-  <strong>Model:</strong>
-  <%= @vehicle.model %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @vehicle.color %>
-</p>
-
-<p>
-  <strong>Wholesale price:</strong>
-  <%= @vehicle.wholesale_price %>
-</p>
+</div class= "show">
+<table id ="customers" , align="center">
 
 
-</p>
-
-<%= image_tag url_for(@vehicle.cover_photo),:size => '600x400' %>
-
-<p>                                         </p>
 
 
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %>
+  <tr>
+
+
+    <p>
+    <td>
+      <strong>Vin:</strong>
+    </td>
+    <td>
+      <%= @vehicle.vin %>
+    </td>
+    </p>
+
+  </tr>
+
+
+
+<tr>
+    <p>
+    <td>
+      <strong>Year:</strong>
+    </td>
+    <td>
+      <%= @vehicle.year %>
+    </td>
+    </p>
+</tr>
+
+  <tr>
+    <p>
+    <td>
+      <strong>Make:</strong>
+    </td>
+    <td>
+      <%= @vehicle.make %>
+    </td>
+    </p>
+
+  </tr>
+
+  <tr>
+    <p>
+    <td>
+      <strong>Model:</strong>
+    </td>
+    <td>
+      <%= @vehicle.model %>
+    </td>
+    </p>
+  </tr>
+
+<tr>
+    <p>
+    <td>
+      <strong>Color:</strong>
+    </td>
+    <td>
+      <%= @vehicle.color %>
+    </td>
+    </p>
+
+</tr>
+  <tr>
+    <p>
+    <td>
+      <strong>Wholesale_Price:</strong>
+    </td>
+    <td>
+      <%= @vehicle.wholesale_price%>
+    </td>
+    </p>
+
+</tr>
+</table>
+</div>
+
+
+
+
+<table>
+  <tr>
+      <%= link_to 'Edit', edit_vehicle_path(@vehicle),class:"submit" %> |
+      <%= link_to 'Back', vehicles_path, class:"submit" %>
+      <p class="picture"><%= image_tag url_for(@vehicle.cover_photo),:size => '600x300' %></p>
+
+  </tr>
+
+</table>
