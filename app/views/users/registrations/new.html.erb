@@ -1,41 +1,50 @@
-<h2>Register</h2>
+<div class="title">
+  <h1>Create a New User </h1>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field"><%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %></div>
-
-  <div class="field"><%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true %></div>
-
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+  <div class="form">
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <p class = "text-box"><%= f.label :first_name, class:"labels" %>
+      <%= f.text_field :first_name, autofocus: true, class:"fields" %> </p></div>
+
+    <div class="field">
+      <p class = "text-box"><%= f.label :last_name, class:"labels" %>
+        <%= f.text_field :last_name, autofocus: true, class:"fields" %> </p></div>
+
+
+    <div class="field">
+      <p class = "text-box"> <%= f.label :email, class:"labels" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"fields" %></p>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <p class = "text-box">
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br/>
+      <%= f.label :password , class:"labels"%>
+      <%= f.password_field :password, autocomplete: "new-password",class:"fields"%>
+    </p>
   </div>
 
   <div class="field">
-    <%= f.label :role %><br/>
-    <%= f.select :role, options_for_select(["agent", "sales", "finance", "inventory"])%>
+    <p class = "text-box"> <%= f.label :password_confirmation, class:"labels" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"fields" %>  </p>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+
+  <div class="field">
+    <p class = "text-box"> <%= f.label :role , class: "labels"%>
+    <%= f.select :role, options_for_select(["admin","agent", "sales", "finance", "inventory"] ), { include_blank: false }, {class:"fields" }%></p>
   </div>
+
+    <div class="send">
+      <p>  <%= f.submit 'Signup', :class => 'submit'%> </p>
+    </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+

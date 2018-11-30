@@ -15,7 +15,7 @@
 
  */
 
-
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 ul {
     list-style-type: none;
@@ -99,27 +99,14 @@ body {
 
 }
 
-body::after {
-    content: "";
-    background: url(keys.jpg);
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-repeat: no-repeat;
-    width : 200%;
-    height: 200%;
 
-}
 
 .form{
     margin: auto;
     width: 50%;
     border: 3px red;
     padding: 10px;
+
 }
 
 .labels{
@@ -189,4 +176,8 @@ body::after {
 .action:hover{
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 
+}
+
+.whitedots{
+    color: white;
 }

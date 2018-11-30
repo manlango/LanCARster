@@ -1,14 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> LanCARster </title>
+</head>
+<body class = "loginbody">
+
+<div class = "login-box">
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+  <div class="textbox">
+    <i class = "fa fa-user" aria-hidden="true"></i>
+
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'email' %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <div class="textbox">
+      <i class = "fa fa-lock" aria-hidden="true"></i>
+
+    <%= f.password_field :password, autocomplete: "current-password",placeholder: 'Password' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
@@ -18,9 +30,13 @@
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
+
+     <%= f.submit "Log in" , :class => 'btn' %>
+
+
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>
+</body>
+</html>

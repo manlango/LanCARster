@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @users = User.search(params[:term])
     authorize @users
   end
 
@@ -73,6 +74,6 @@ class UsersController < ApplicationController
   end
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :gender, :phone,:date_of_birth,:role, :is_female)
+    params.require(:user).permit(:first_name, :last_name, :gender, :phone,:date_of_birth,:role, :is_female, :term)
   end
 end

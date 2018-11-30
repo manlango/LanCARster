@@ -1,17 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
 
-<table>
+<div class="elements">
+<div class ="title">
+<h1>Manage Employee Roles</h1>
+</div>
+
+
+
+<%=form_tag(users_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term], class: "search" , placeholder: 'Search by email...'%>
+  <%= submit_tag 'Search', name: nil, class:"submit" %>
+<% end %>
+</div>
+
+<table id ="customers" , align="center">
   <thead>
   <tr>
     <th>First name </th>
     <th>Last name </th>
     <th>Email </th>
     <th>Role </th>
-    <th colspan="3"></th>
+    <th colspan="3"> Actions</th>
   </tr>
   </thead>
+
   <tbody>
   <% @users.each do |user| %>
     <tr>
@@ -20,11 +33,12 @@
       <td><%= user.email %></td>
       <td><%= user.role %></td>
 
-      <td><%= link_to 'Edit', edit_user_path(user) if policy(user).edit? %></td>
-      <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }if policy(user).destroy?  %></td>
+      <td><%= link_to 'Change Role', edit_user_path(user) , class:"action" if policy(user).edit? %></td>
+      <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"action" if policy(user).destroy?  %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
 
 

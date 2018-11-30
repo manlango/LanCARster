@@ -11,6 +11,15 @@ class User < ApplicationRecord
 
   has_many :customers
 
+
+  def self.search(term)
+    if term
+      where('email iLIKE ?', "%#{term}%").order('id DESC')
+    else
+      order('id DESC')
+    end
+  end
+
 def full_name
   "#{first_name} #{last_name}"
 end
