@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   get 'users/index'
   resources :quotes
   resources :customers
-  resources :departments
   resources :vehicles
-  resources :posts
   resources :users
   root 'home#index'
   match '/users',   to: 'users#index',   via: 'get'

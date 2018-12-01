@@ -4,28 +4,33 @@ class Quote < ApplicationRecord
   belongs_to :user
 
   after_save :markup_tax_calculation
+  validates_numericality_of :total, greater_than_or_equal_to: 0
 
-  def markup_tax_calculation
+  def update_prices
+    @wholesale =  vehicle.wholesale_price
+
+    @markup_total = markup_calculation(@wholesale)
+    @tax_total = tax_calculation(@wholesale)
+    @total = @wholesale + @markup_total + @tax_total
+    update_columns(markup: @markup_total, sales_tax: @tax_total, total: @total)
+  end
+
+  def markup_calculation(wholesale_price)
     markup_percent = 0.082
-    tax_percent = 0.043
-    wholesale = vehicle.wholesale_price
+    wholesale_price * markup_percent
+  end
 
-    markup_total = wholesale * markup_percent
-    tax_total = (wholesale + markup_total) * tax_percent
-    total = wholesale + markup_total + tax_total
-    update_columns(markup: markup_total, sales_tax: tax_total, total: total)
+  def tax_calculation(wholesale_price)
+    tax_percent = 0.043
+    sub_total = wholesale_price + markup_calculation(wholesale_price)
+    sub_total * tax_percent
   end
 
   def vehicle_desc
-    markup_percent = 0.082
-    tax_percent = 0.043
-    wholesale = vehicle.wholesale_price
-
-    markup_total = wholesale * markup_percent
-    tax_total = (wholesale + markup_total) * tax_percent
-    total = wholesale + markup_total + tax_total
     "#{vehicle.vin} - #{vehicle.color} #{vehicle.make} #{vehicle.model}, #{vehicle.year}: $ #{total.round(2)}"
   end
 
-  end
+  private
+
+end
 

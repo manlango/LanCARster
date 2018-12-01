@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  vehicle: one
+  user: one
+  markup: 1.5
+  sales_tax: 1.5
+  total: 1.5
+
+two:
+  customer: two
+  vehicle: two
+  user: two
+  markup: 1.5
+  sales_tax: 1.5
+  total: 1.5

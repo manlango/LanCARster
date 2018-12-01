@@ -22,5 +22,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/ruby4339_finalproject_development</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="ruby4339_finalproject_test@localhost" uuid="993228e7-77b5-4f34-8a51-961651c68bf2">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/ruby4339_finalproject_test</jdbc-url>
+    </data-source>
   </component>
 </project>
