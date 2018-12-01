@@ -2,7 +2,7 @@
 
 <head>
 
-  <title>SomeApp</title>
+  <title>LanCARster</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -46,7 +46,7 @@
 
         <li>
           <% if policy(Quote).sold? %>
-          <%= link_to "Financial Report", report_index_path %>
+          <%= link_to "Loan Amortization Calculator", report_index_path %>
             <%end %>
         </li>
 

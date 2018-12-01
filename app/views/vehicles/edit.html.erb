@@ -1,6 +1,8 @@
-<h1>Editing Vehicle</h1>
 
+<div class="title">
+<h1>Editing Vehicle</h1>
+</div>
 <%= render 'form', vehicle: @vehicle %>
 
-<%= link_to 'Show', @vehicle %> |
-<%= link_to 'Back', vehicles_path %>
+<%= link_to 'Show', @vehicle, class:"submit" %> |
+<%= link_to 'Back', vehicles_path, class:"submit" %>

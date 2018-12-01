@@ -69,7 +69,7 @@ h1 {
 }
 
 .title{
-  border-style: outset;
+
   margin: 4px 2px;
 
 }
@@ -127,4 +127,25 @@ a {
 .action:hover{
   background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 
+}
+.gindex-body{
+
+  margin-bottom: 15px;
+  padding: 0;
+  text-align: right;
+  font-family: sans-serif;
+  background: url('amort.jpg') no-repeat ;
+  background-size: 500px 350px;
+  z-index: 3;
+}
+
+.rindex-body{
+
+  margin-bottom: 15px;
+  padding: 0;
+  text-align: right;
+  font-family: sans-serif;
+  background: url('chart.jpg') no-repeat ;
+  background-size: 800px 950px;
+  z-index: 3;
 }

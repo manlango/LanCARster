@@ -1,3 +1,11 @@
+<html>
+<head>
+  <title> Manage Quotes </title>
+</head>
+<body class = "qform-body">
+
+
+
 <%= form_with(model: quote, local: true) do |form| %>
   <% if quote.errors.any? %>
     <div id="error_explanation">
@@ -46,3 +54,4 @@
     </div>
 </div>
 <% end %>
+</body>
