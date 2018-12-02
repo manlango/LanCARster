@@ -10,38 +10,38 @@
   <div class="title">
     <h1>Log in </h1>
   </div>
-       <br/>
+  <br/>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
     <div class = "formup">
 
-  <div class="textbox">
-    <i class = "fa fa-user" aria-hidden="true"></i>
+      <div class="textbox">
+        <i class = "fa fa-user" aria-hidden="true"></i>
 
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'email' %>
-  </div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'email' %>
+      </div>
 
-    <div class="textbox">
-      <i class = "fa fa-lock" aria-hidden="true"></i>
+      <div class="textbox">
+        <i class = "fa fa-lock" aria-hidden="true"></i>
 
-    <%= f.password_field :password, autocomplete: "current-password",placeholder: 'Password' %>
-  </div>
+        <%= f.password_field :password, autocomplete: "current-password",placeholder: 'Password' %>
+      </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-
-     <%= f.submit "Log in" , :class => 'btn' %>
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
 
 
-<% end %>
+      <%= f.submit "Log in" , :class => 'btn' %>
 
-<%= render "users/shared/links" %>
+
+  <% end %>
+
+  <%= render "users/shared/links" %>
   </div>
 </div>
 </body>

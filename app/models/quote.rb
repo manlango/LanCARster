@@ -3,8 +3,8 @@ class Quote < ApplicationRecord
   belongs_to :vehicle
   belongs_to :user
 
-  after_save :markup_tax_calculation
-  validates_numericality_of :total, greater_than_or_equal_to: 0
+  after_save :update_prices
+  # validates_numericality_of :total, greater_than_or_equal_to: 0
 
   def update_prices
     @wholesale =  vehicle.wholesale_price

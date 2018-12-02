@@ -258,7 +258,28 @@ body {
 
 
 
+.navbar ul{
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; }
 
 
+body {
+    margin-top: 90px;}
 
 
+.print {
+    background-color: lightslategrey;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+
+}
+
+.print:hover {
+    background-color: red;
+}

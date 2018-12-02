@@ -10,12 +10,12 @@
 <div class ="title">
 <h1>Loan Amortization Planner </h1>
 </div>
-
+</div>
 
 <div class ="form">
 <%= form_tag(report_index_path, :method => :post) do %>
   <div class="field">
-  <p class ="text-box"> <%= label_tag(:quote, "Quote:") %>
+  <p class ="text-box"> <%= label_tag(:quote, "Quote:", class:"labels") %>
     <%= select_tag :id, options_from_collection_for_select(Quote.all, :id, :vehicle_desc),
                    {:class=>'fields', :prompt => 'Select Quote'} %></p>
   </div>
@@ -30,12 +30,11 @@
   <div class="field">
     <p class ="text-box">
     <%= label_tag(:interest, "Annual Interest Rate: ", class:"labels") %>
-    <%= number_field_tag(:rates, nil, in: 1.0..20.0, class:"fields") %>%<br/>
-      <%= submit_tag("Generate Financial Report", :class => 'submit') %>
-  <p>
+      <%= number_field_tag(:rates, nil, in: 1.0..20.0, class:"fields") %>%
+    </p>
   </div>
 
-<% end %>
-</div>
+    <%= submit_tag("Generate Financial Report", :class => 'submit') %>
+  <% end %>
 </div>
 </body>

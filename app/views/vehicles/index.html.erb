@@ -50,6 +50,7 @@
       <td><%= vehicle.model %></td>
       <td><%= vehicle.color %></td>
       <td>$ <%= number_with_precision(vehicle.wholesale_price, precision: 2) %></td>
+      <td> <%=  image_tag url_for(vehicle.cover_photo), :size => '90x80'%></td>
       <td><%= link_to 'Show', vehicle , class:"action"%> </td>
       <td><%= link_to 'Edit', edit_vehicle_path(vehicle), class:"action"  if policy(Vehicle).edit? %> </td>
       <td><%= link_to 'Delete', vehicle, method: :delete, data: { confirm: 'Are you sure?' }, class:"action"  if policy(Vehicle).destroy? %> </td>

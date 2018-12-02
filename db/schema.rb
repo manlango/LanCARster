@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_022059) do
     t.string "address"
     t.string "email"
     t.string "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: -> { "now()" }
+    t.datetime "updated_at", default: -> { "now()" }
   end
 
   create_table "departments", force: :cascade do |t|
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_022059) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: -> { "now()" }
+    t.datetime "updated_at", default: -> { "now()" }, null: false
     t.string "first_name"
     t.string "last_name"
     t.string "phone"
@@ -101,8 +101,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_022059) do
     t.string "model"
     t.string "color"
     t.float "wholesale_price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: -> { "now()" }
+    t.datetime "updated_at", default: -> { "now()" }
     t.string "cover_photo"
   end
 

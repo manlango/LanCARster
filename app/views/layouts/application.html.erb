@@ -34,12 +34,12 @@
           <%end %>
         </li>
 
-        <li>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-        </li>
+
+          <%= link_to "Logout", destroy_user_session_path, method: :delete , class:"submit"%>
+
 
         <li>
-          <%= link_to "Edit profile", edit_user_registration_path %>
+          <%= link_to "Edit profile", edit_user_registration_path%>
         </li>
 
 
@@ -80,6 +80,17 @@
           <%end %>
         </li>
 
+
+
+     <button class="print" onclick="myFunction()"><i class="fa fa-print"></i></button>
+
+        <script>
+            function myFunction() {
+                window.print();
+            }
+        </script>
+
+
     <% else %>
       <%= link_to "Sign Up", new_user_registration_path, class:"submit" %>
       <%= link_to "Login", new_user_session_path, class:"submit" %>
@@ -88,8 +99,8 @@
 
 
     </ul>
-      </div>
 
+</div>
 
 
     <%= yield %>
