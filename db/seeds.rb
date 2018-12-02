@@ -1,58 +1,3 @@
-User.create!([
-  {email: "acolquerani@ameblo.jp", encrypted_password: "iNkuFU9IFGoE", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: nil, first_name: "Andras", last_name: "Colqueran", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "jorrah0@aol.com", encrypted_password: "95GtnFP", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "sales", first_name: "Joshua", last_name: "Orrah", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "sunita@mail.com", encrypted_password: "$2a$11$v4zIGm3TJF2LmX3w4CZ.jOLJlB8wNE08fKIP1HQJA3lD.4gxFr70q", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Marta", last_name: "Sunita", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "billy@mail.com", encrypted_password: "$2a$11$xf8aZ8VAdw9gUwFYDwv8Ye1TXTmgyEvRGmnJc/3uauPE8auibOIqu", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Billy", last_name: "Dinh", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "marce@mail.com", encrypted_password: "$2a$11$IjFh680qbYdHXBrBUPRt5.OI7Mg2RlO3IxR8T7n8h881CkKZa1.U.", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Marina", last_name: "Ondo", phone: "", date_of_birth: "2018-11-24 00:00:00", is_female: false},
-  {email: "guanipa@mail.com", encrypted_password: "$2a$11$qU.IKAkloOZoPHPKwnXAJueyR0lxW2bFYIEeNSBy8Umqm8mDOfC1y", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "sales", first_name: "Santos", last_name: "Torealva", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "matutina@mail.com", encrypted_password: "$2a$11$oBHJYbxiAwsVSxTq24zbDedIfrDkBvmUrTBrYTavkEJx7UBpP1do.", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Soraya", last_name: "Matutina", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "sandra@email.com", encrypted_password: "$2a$11$AtEWe2hfoJ4S3Dvvessh5.JVL6FPUZ7bf7bxMBqEJc0xLDDMsKpVC", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "sales", first_name: "Sandra", last_name: "Steward", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "idara@email.com", encrypted_password: "$2a$11$4W7eIfjc6jSISQCC6td3wuUbBgRc4qElqpJ3JUIVRD6wTOFBoZbVO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Clara", last_name: "Idara", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "mills@email.com", encrypted_password: "$2a$11$xw/g/pEayicbbEsy9OK29.Vh8YqON9xGlCP9oWYmi8.Y/U6ze48GO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "sales", first_name: "Sara", last_name: "mills", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "noara@mail.com", encrypted_password: "$2a$11$MZLoohd2cqvLivINXmdeD.1YLMDfM/hkTfNj7assvii3rtoY3DB.6", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Carla", last_name: "Noara", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "laura@mail.com", encrypted_password: "$2a$11$WHo.6cwslpXoOrEq1v7SO.MKHFRWJSITYMfNawoEcuW0EIBhsajvO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Brittany", last_name: "Steward", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "barba@mail.com", encrypted_password: "$2a$11$OHKdjDFNZnpjasBJ8d0Ie.WprxpA1aopdYxe1d5TIw0wT/75DN14e", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "inventory", first_name: "Miguel", last_name: "Barbados", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "lee@mail.com", encrypted_password: "$2a$11$gAdsklzdHZeJo8OtqaJsfetQTlsldB0Q1j6lkZAs7IisWCBTMoA8W", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "inventory", first_name: "Bruce", last_name: "Lee", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "email@email.com", encrypted_password: "$2a$11$aLwkDWSoZUvBfOHZ/qDWhOGqKseBGXpO.vbK6pDVC.hpAokIqfrb.", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "inventory", first_name: "Brian", last_name: "Santos", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "maanasa10@gmail.com", encrypted_password: "$2a$11$wBPDzq1rpJ5ou3eFrbADdOe9McCiKmZA32SShRgo/LvCDZrK2qkum", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "maanasa", last_name: "neralla", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "lolas@mail.com", encrypted_password: "$2a$11$Sa/JDVo.bqtHur1SYP6bkul0dClLWn9Ji4sbY6kP1sVr3DJNaibBO", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Sonia", last_name: "Raquel", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "sandramail@mail.com", encrypted_password: "$2a$11$7kwm/Qanl1NLms5sqKrWz.TRW4bWyISKS251RcG8IURJSaAdmAZdS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "inventory", first_name: "lola", last_name: "Sandra", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "bibiana@mail.com", encrypted_password: "$2a$11$HX8HFlJVQa2xg9HNskenQeZKxu8W2IyF9T.m3vseYRCe/N.X6tYBm", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Elsa", last_name: "Bibiana", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "epammail@mail.com", encrypted_password: "$2a$11$Av9suL/xBMa2Q1TSWPz09uTtTs5gbMCok4AELzMyctsEBWqGx38mS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Marcelo", last_name: "Epam", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "xoxo@mail.com", encrypted_password: "$2a$11$DEte3KBIbZM7VOKzI8FMKeDd2mWN/gt/.mwR9XHIRoBqr0n4BkUDi", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Maele", last_name: "Ndong", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "sumila@mail.com", encrypted_password: "$2a$11$qpbGzEPXVYe.Uj.QcQaYW.ZED.c84Y62I9zCdwWjwZnCARxEjbHD2", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Marta", last_name: "Sumila", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "mail@mail.com", encrypted_password: "$2a$11$pFEJ1iSJ0SH5ftvMfjr/9OKi72LdnIowRX8qaD.O7RZMI4Ei4l.hq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: nil, last_name: nil, phone: nil, date_of_birth: nil, is_female: false},
-  {email: "marce@kmail.com", encrypted_password: "$2a$11$vxdU9wVS6XTeFfZmpyxZDuuk/iOp5B0FRj0q6sQOAg/HOakDepwf6", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Marcelo", last_name: "Esono", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "gloria@mail.com", encrypted_password: "$2a$11$e3qOhnFbi1.2wDmWko0PKuMY0F74NcC41VRYG7bQDjblbvVkkt6kq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Maria Gloria", last_name: "Obono Bibang", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "ptilerf@skyrock.com", encrypted_password: "Jq5tRPx6", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Prudi", last_name: "Tiler", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "fiacovuzzi5@myspace.com", encrypted_password: "P0OYyXlv0", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Fee", last_name: "Iacovuzzi", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "wmckoy8@nifty.com", encrypted_password: "5sOBolDFo23A", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Worthy", last_name: "McKoy", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "vskoggings2@mashable.com", encrypted_password: "2nPWwt2R", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Vaughn", last_name: "Skoggings", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "fsimanenko4@soundcloud.com", encrypted_password: "9rCxBvq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Freeman", last_name: "Simanenko", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "ckingdon1@intel.com", encrypted_password: "ubOQ3O8dRTeT", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Cletus", last_name: "Kingdon", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "eberi6@w3.org", encrypted_password: "mb5LrGM6mQJ0", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Emmalyn", last_name: "Beri", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "srobard7@moonfruit.com", encrypted_password: "CFoYHNED", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Sydney", last_name: "Robard", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "vsoggeeg@prweb.com", encrypted_password: "raPbJF", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Valaree", last_name: "Soggee", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "mcaulfield3@4shared.com", encrypted_password: "3X7XEWb", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Micah", last_name: "Caulfield", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "cadmansd@va.gov", encrypted_password: "W2v9vmad", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Conny", last_name: "Admans", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "jmanterfieldb@instagram.com", encrypted_password: "O5fVIYqCYJr", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Joyann", last_name: "Manterfield", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "khuddartj@howstuffworks.com", encrypted_password: "w9tyqDdoKk", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Koenraad", last_name: "Huddart", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "thallbirdk@shinystat.com", encrypted_password: "oYCEpSVVLw", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Tobey", last_name: "Hallbird", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "kdinsellh@mtv.com", encrypted_password: "7KsQVHko6", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Keane", last_name: "Dinsell", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "wmeysl@meetup.com", encrypted_password: "OcIFDUMIEbx", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Westley", last_name: "Meys", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "kstoneleye@amazon.com", encrypted_password: "9cr9wY", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Klaus", last_name: "Stoneley", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "gsighardm@umich.edu", encrypted_password: "OQb9ru9Gcf5", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Gilbertina", last_name: "Sighard", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "vlyfen@github.com", encrypted_password: "qWOs77tHlmd", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Vachel", last_name: "Lyfe", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "lviggers9@weather.com", encrypted_password: "e8gXfXQiDok", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Lola", last_name: "Viggers", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "cgamlenc@nih.gov", encrypted_password: "Yfe7nDJqZ", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Chaddy", last_name: "Gamlen", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "aengar@si.edu", encrypted_password: "qicx6FH2D4yI", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Andi", last_name: "Enga", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "kpilipyaks@homestead.com", encrypted_password: "fq2iM4wW", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Katherine", last_name: "Pilipyak", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "hpharoaho@mtv.com", encrypted_password: "AXZ7xbDZcG", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Hadley", last_name: "Pharoah", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "jgodilingtonp@technorati.com", encrypted_password: "fsbqUfKD", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "finance", first_name: "Jard", last_name: "Godilington", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "lmoorsq@census.gov", encrypted_password: "6Ojwqugv", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Linoel", last_name: "Moors", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "kgraalmanu@salon.com", encrypted_password: "vfq1pahERa", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "admin", first_name: "Karlotta", last_name: "Graalman", phone: nil, date_of_birth: nil, is_female: false},
-  {email: "tburnsidest@wunderground.com", encrypted_password: "9jG64gibMF", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, role: "agent", first_name: "Twyla", last_name: "Burnsides", phone: nil, date_of_birth: nil, is_female: false}
-])
 Customer.create!([
   {gender: "Female", first_name: "Sarah", last_name: "Brown", address: "4356 Street dr", email: "marta@mail.com", phone: "8659430302"},
   {gender: "Male", first_name: "Evin", last_name: "Dimitrie", address: "8536 Rutledge Center", email: "edimitrie0@reddit.com", phone: "269-425-4458"},
@@ -257,15 +202,22 @@ Customer.create!([
   {gender: "Male", first_name: "Hank", last_name: "Lindenbaum", address: "342 Moulton Alley", email: "hlindenbaum2q@altervista.org", phone: "121-702-1502"},
   {gender: "Male", first_name: "Hilton", last_name: "Hartop", address: "41246 Fallview Drive", email: "hhartop2r@alexa.com", phone: "232-290-8720"}
 ])
-Vehicle.create!([
-  {vin: "WBA3B5C59FF500799", year: 2008, make: "Volvo", model: "S60", color: "Puce", wholesale_price: 6659.0, cover_photo: nil},
-  {vin: "KNADM4A37C6833668", year: 2007, make: "Lincoln", model: "Continental Mark", color: "red", wholesale_price: 69504.0, cover_photo: nil},
-  {vin: "kerpt45op64p5ip3w", year: 2006, make: "Dodge", model: "Rio", color: "blue", wholesale_price: 7067.0, cover_photo: nil},
-  {vin: "54054rg0dfig4350", year: 2008, make: "Dodge", model: "Alero", color: "white", wholesale_price: 95640.0, cover_photo: nil},
-  {vin: "609504rpokgrpok", year: 2007, make: "Chevrolet", model: "S60", color: "Dark Blue", wholesale_price: 69540.0, cover_photo: nil},
-  {vin: "tdgkdfk45l345", year: 2018, make: "Lincoln", model: "Concorde", color: "black", wholesale_price: 6794.0, cover_photo: nil},
-  {vin: "598u54093sfdiujk", year: 2001, make: "Kia", model: "Alero", color: "yellow", wholesale_price: 9440.0, cover_photo: nil},
-  {vin: "6005434", year: 2004, make: "Land Rover", model: "Concorde", color: "grey", wholesale_price: 2000.0, cover_photo: nil},
-  {vin: "549043rejihdsfds09", year: 2004, make: "Suzuki", model: "Rio", color: "Shiny blue", wholesale_price: 3000.0, cover_photo: nil},
-  {vin: "4305ererj", year: 2005, make: "Chrystler", model: "XL-7", color: "Red", wholesale_price: 8000.0, cover_photo: nil}
-])
+
+# Vehicle.create!([
+#   {vin: "WBA3B5C59FF500799", year: 2008, make: "Volvo", model: "S60", color: "Puce", wholesale_price: 6659.0, cover_photo: nil},
+#   # {vin: "KNADM4A37C6833668", year: 2007, make: "Lincoln", model: "Continental Mark", color: "red", wholesale_price: 69504.0, cover_photo: nil},
+#   # {vin: "kerpt45op64p5ip3w", year: 2006, make: "Dodge", model: "Rio", color: "blue", wholesale_price: 7067.0, cover_photo: nil},
+#   # {vin: "54054rg0dfig4350", year: 2008, make: "Dodge", model: "Alero", color: "white", wholesale_price: 95640.0, cover_photo: nil},
+#   # {vin: "609504rpokgrpok", year: 2007, make: "Chevrolet", model: "S60", color: "Dark Blue", wholesale_price: 69540.0, cover_photo: nil},
+#   # {vin: "tdgkdfk45l345", year: 2018, make: "Lincoln", model: "Concorde", color: "black", wholesale_price: 6794.0, cover_photo: nil},
+#   # {vin: "598u54093sfdiujk", year: 2001, make: "Kia", model: "Alero", color: "yellow", wholesale_price: 9440.0, cover_photo: nil},
+#   # {vin: "6005434", year: 2004, make: "Land Rover", model: "Concorde", color: "grey", wholesale_price: 2000.0, cover_photo: nil},
+#   # {vin: "549043rejihdsfds09", year: 2004, make: "Suzuki", model: "Rio", color: "Shiny blue", wholesale_price: 3000.0, cover_photo: nil},
+#   # {vin: "4305ererj", year: 2005, make: "Chrystler", model: "XL-7", color: "Red", wholesale_price: 8000.0, cover_photo: nil}
+# ])
+
+vehicle1 = Vehicle.new(
+    vin: "WBA3B5C59FF500799", year: 2008, make: "Volvo", model: "S60", color: "Puce", wholesale_price: 6659.0, cover_photo: nil
+)
+vehicle1.save!
+vehicle1.cover_photo.attach(io: File.open('app/views/vehicles/volvo.jpg'), filename: 'volvo.jpg', content_type: 'image/jpg')
