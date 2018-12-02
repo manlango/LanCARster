@@ -44,8 +44,8 @@
 
 
     <div class="field">
-   <p class="text-box" >  <%= form.label :Status, class:"labels" %><br/>
-     <%= form.select :sold, ['Pending','Sold'], :selected => 'Pending', class:"fields" %> </p>
+   <p class="text-box" >  <%= form.label :Status, class:"labels" %>
+     <%= form.select :sold, options_for_select(["Pending","Sold"] ), { include_blank: false }, {class:"fields" }%> </p>
     </div>
 
   <%end %>
