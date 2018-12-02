@@ -47,6 +47,20 @@ ActiveRecord::Schema.define(version: 2018_11_25_022059) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "quotes", force: :cascade do |t|
     t.bigint "customer_id"
     t.bigint "vehicle_id"
@@ -87,7 +101,6 @@ ActiveRecord::Schema.define(version: 2018_11_25_022059) do
     t.string "model"
     t.string "color"
     t.float "wholesale_price"
-    t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cover_photo"

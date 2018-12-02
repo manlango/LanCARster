@@ -76,10 +76,13 @@ li:last-child {
     font-family: Arial;
     font-size: 12px;
     border-collapse:separate;
-
     border-radius:6px;
     -moz-border-radius:6px;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+
+
+
 
 }
 
@@ -185,7 +188,77 @@ body {
 
 /* line 66, C:/ruby4339_finalproject/app/assets/stylesheets/vehicles.scss */
 .title {
-    text-decoration: underline;
+
     margin: 4px 2px;
+    background-color: black;
+    color: white;
+    border-radius: 35px;
+    width: 300px;
+    font-family: sans-serif;
+
+
 }
+
+.home-body{
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: right;
+    font-family: sans-serif;
+    background: url('logo.PNG') no-repeat ;
+    background-size: 400px 100px;
+    z-index: 3;
+}
+
+.elements{
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 90px;
+    margin-left: 600px;
+
+
+}
+
+.elements h1{
+    text-align: center;
+}
+
+
+.home-title{
+
+    margin: 4px 2px;
+
+    color: red;
+
+    font-family: sans-serif;
+
+
+
+}
+
+.home-body{
+    margin-bottom: 15px;
+    text-align: right;
+    font-family: sans-serif;
+    background: url("logo.jpg") no-repeat;
+    background-size: 800px 550px;
+    z-index: 3;
+}
+
+.home-elements{
+    position: absolute;
+    bottom: -300px;
+    right: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 90px;
+    margin-left: 600px;
+
+}
+
+
+
+
+
+
 

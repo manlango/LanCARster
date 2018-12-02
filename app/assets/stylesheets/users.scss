@@ -11,13 +11,15 @@
   z-index: 3;
 }
 .login-box{
-  width: 280px;
+  width: 500px;
   position: absolute;
   top: 250%;
   left: 50%;
   transform: translate(-50%, -50%);
   color:black;
   cursor: pointer;
+  background: white;
+  border-radius: 25px;
 
 }
 .login-box h1{
@@ -27,12 +29,50 @@
   margin-bottom: 50px;
   padding: 13px 0;
 }
+
+.signupbody{
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  background: url('http://epicwallpaperz.com/wallpaper-hd/dubai-cars-wallpaper-desktop-background-On-wallpaper-hd.jpg') no-repeat ;
+  background-size: 1600px 800px;
+  z-index: 3;
+
+
+
+}
+
+.signup-box{
+  width: 500px;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:black;
+  cursor: pointer;
+  background: white;
+  border-radius: 25px;
+
+}
+
+
+.signup-box h1{
+  float:left;
+  font-size: 35px;
+  border-bottom: 6px solid red;
+  margin-top: 0px;
+  padding: 0px 0;
+  color: black;
+
+}
+
+
 .textbox{
   width: 100%;
   overflow: hidden;
   font-size: 20px;
-  padding: 8px 0;
-  margin: 8px 0;
+  padding: 0px 0;
+  margin: 0px 0;
   border-bottom: 1px solid red;
 }
 .textbox i{
@@ -83,4 +123,15 @@
   background: url('mypuzzle.jpg') no-repeat ;
   background-size: 550px 400px;
   z-index: 3;
+}
+
+.formup{
+  margin: auto;
+  width: 50%;
+  border: 3px red;
+  padding: 10px;
+
+
+
+
 }

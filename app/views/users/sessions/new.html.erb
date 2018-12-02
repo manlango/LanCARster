@@ -3,13 +3,18 @@
 <head>
   <title> LanCARster </title>
 </head>
-<body class = "loginbody">
+<body class = "signupbody">
 
-<div class = "login-box">
+<div class = "signup-box">
 
-<h2>Log in</h2>
+  <div class="title">
+    <h1>Log in </h1>
+  </div>
+       <br/>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class = "formup">
 
   <div class="textbox">
     <i class = "fa fa-user" aria-hidden="true"></i>
@@ -37,6 +42,7 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+  </div>
 </div>
 </body>
 </html>

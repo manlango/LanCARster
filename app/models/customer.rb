@@ -6,7 +6,7 @@ class Customer < ApplicationRecord
 
   def self.search(term)
     if term
-      where('last_name iLIKE ?', "%#{term}%").order('id DESC')
+      where('email iLIKE ?', "%#{term}%").order('id DESC')
     else
       order('id DESC')
     end

@@ -18,7 +18,7 @@
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
     <data-source name="ruby4339_finalproject_development@localhost" uuid="1b2dc758-ab53-42ab-be19-28bcc094ceca">
-      <database-info product="PostgreSQL" version="10.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" family="POSTGRES" exact-version="10.5">
+      <database-info product="PostgreSQL" version="9.5.14" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" family="POSTGRES" exact-version="9.5.14">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
@@ -27,7 +27,7 @@
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
     <data-source name="ruby4339_finalproject_test@localhost" uuid="993228e7-77b5-4f34-8a51-961651c68bf2">
-      <database-info product="PostgreSQL" version="10.5" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" family="POSTGRES" exact-version="10.5">
+      <database-info product="PostgreSQL" version="9.5.14" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" family="POSTGRES" exact-version="9.5.14">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />

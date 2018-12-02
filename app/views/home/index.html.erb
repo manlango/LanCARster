@@ -1,8 +1,26 @@
 
 
+<html>
+<head>
+  <title> Home </title>
+</head>
+<% if user_signed_in? %>
+<body class = "home-body">
+
+<div class="home-elements">
+
+<div class ="home-title">
+
+<h1> Hi <%= current_user.first_name %>, you look great today!</h1>
+    </div>
+</div>
+</body>
+
+    <%else %>
 
 
-<h1 class="whitedots">..............................
-..........................................................................
-.......................................................</h1>
-<h1> Welcome to America's #1 Autodealer! <h1>
+
+<%end %>
+
+
+

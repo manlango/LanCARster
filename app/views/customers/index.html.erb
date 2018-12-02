@@ -29,13 +29,14 @@
 
 
   <%=form_tag(customers_path, method: :get) do %>
-    <%= text_field_tag :term, params[:term], class: "search" , placeholder: 'Search by last name...'%>
+    <%= text_field_tag :term, params[:term], class: "search" , placeholder: 'Search by email...'%>
         <%= submit_tag 'Search', name: nil, class:"submit" %>
   <% end %>
 
 
 
 </div>
+
 <table id ="customers" , align="center">
   <thead>
     <tr>
