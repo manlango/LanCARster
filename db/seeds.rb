@@ -203,21 +203,62 @@ Customer.create!([
   {gender: "Male", first_name: "Hilton", last_name: "Hartop", address: "41246 Fallview Drive", email: "hhartop2r@alexa.com", phone: "232-290-8720"}
 ])
 
-# Vehicle.create!([
-#   {vin: "WBA3B5C59FF500799", year: 2008, make: "Volvo", model: "S60", color: "Puce", wholesale_price: 6659.0, cover_photo: nil},
-#   # {vin: "KNADM4A37C6833668", year: 2007, make: "Lincoln", model: "Continental Mark", color: "red", wholesale_price: 69504.0, cover_photo: nil},
-#   # {vin: "kerpt45op64p5ip3w", year: 2006, make: "Dodge", model: "Rio", color: "blue", wholesale_price: 7067.0, cover_photo: nil},
-#   # {vin: "54054rg0dfig4350", year: 2008, make: "Dodge", model: "Alero", color: "white", wholesale_price: 95640.0, cover_photo: nil},
-#   # {vin: "609504rpokgrpok", year: 2007, make: "Chevrolet", model: "S60", color: "Dark Blue", wholesale_price: 69540.0, cover_photo: nil},
-#   # {vin: "tdgkdfk45l345", year: 2018, make: "Lincoln", model: "Concorde", color: "black", wholesale_price: 6794.0, cover_photo: nil},
-#   # {vin: "598u54093sfdiujk", year: 2001, make: "Kia", model: "Alero", color: "yellow", wholesale_price: 9440.0, cover_photo: nil},
-#   # {vin: "6005434", year: 2004, make: "Land Rover", model: "Concorde", color: "grey", wholesale_price: 2000.0, cover_photo: nil},
-#   # {vin: "549043rejihdsfds09", year: 2004, make: "Suzuki", model: "Rio", color: "Shiny blue", wholesale_price: 3000.0, cover_photo: nil},
-#   # {vin: "4305ererj", year: 2005, make: "Chrystler", model: "XL-7", color: "Red", wholesale_price: 8000.0, cover_photo: nil}
-# ])
-
 vehicle1 = Vehicle.new(
-    vin: "WBA3B5C59FF500799", year: 2008, make: "Volvo", model: "S60", color: "Puce", wholesale_price: 6659.0, cover_photo: nil
+    vin: "WBA3B5C59FF500799", year: 2008, make: "Volvo", model: "S60", color: "Blue", wholesale_price: 15640.0, cover_photo: nil
 )
 vehicle1.save!
-vehicle1.cover_photo.attach(io: File.open('app/views/vehicles/volvo.jpg'), filename: 'volvo.jpg', content_type: 'image/jpg')
+vehicle1.cover_photo.attach(io: File.open('app/views/vehicles/volvo_s60_2008_blue.jpg'), filename: 'volvo_s60_2008_blue.jpg', content_type: 'image/jpg')
+
+vehicle2 = Vehicle.new(
+    vin: "KNADM4A37C6833668", year: 2008, make: "Dodge", model: "Alero", color: "White", wholesale_price: 19504.0, cover_photo: nil
+)
+vehicle2.save!
+vehicle2.cover_photo.attach(io: File.open('app/views/vehicles/dodge_alero_2008_white.jpg'), filename: 'dodge_alero_2008_white.jpg', content_type: 'image/jpg')
+
+vehicle3 = Vehicle.new(
+    vin: "KERPT45OP64P5IP3W", year: 2018, make: "Ford", model: "F150", color: "Red", wholesale_price: 29504.0, cover_photo: nil
+)
+vehicle3.save!
+vehicle3.cover_photo.attach(io: File.open('app/views/vehicles/ford_f150_2018_red.jpg'), filename: 'ford_f150_2018_red.jpg', content_type: 'image/jpg')
+
+vehicle4 = Vehicle.new(
+    vin: "54054RG0DFIG4350", year: 2004, make: "Chrysler", model: "Concorde", color: "Grey", wholesale_price: 9504.0, cover_photo: nil
+)
+vehicle4.save!
+vehicle4.cover_photo.attach(io: File.open('app/views/vehicles/chrysler_concorde_2004_grey.jpg'), filename: 'chrysler_concorde_2004_grey.jpg', content_type: 'image/jpg')
+
+vehicle5 = Vehicle.new(
+    vin: "609504RPOKGRPOK", year: 2000, make: "Honda", model: "Civic", color: "Blue", wholesale_price: 6000.0, cover_photo: nil
+)
+vehicle5.save!
+vehicle5.cover_photo.attach(io: File.open('app/views/vehicles/honda_civic_2000_blue.jpg'), filename: 'honda_civic_2000_blue.jpg', content_type: 'image/jpg')
+
+vehicle6 = Vehicle.new(
+    vin: "598U54093SFDIUJ", year: 2010, make: "Nissan", model: "GTR", color: "Black", wholesale_price: 24514.0, cover_photo: nil
+)
+vehicle6.save!
+vehicle6.cover_photo.attach(io: File.open('app/views/vehicles/nissan_gtr_2010_black.jpg'), filename: 'nissan_gtr_2010_black.jpg', content_type: 'image/jpg')
+
+vehicle7 = Vehicle.new(
+    vin: "4305ERERJ", year: 2019, make: "Kia", model: "Sportage", color: "Red", wholesale_price: 23750.0, cover_photo: nil
+)
+vehicle7.save!
+vehicle7.cover_photo.attach(io: File.open('app/views/vehicles/kia_sportage_2019_red.jpg'), filename: 'kia_sportage_2019_red.jpg', content_type: 'image/jpg')
+
+vehicle8 = Vehicle.new(
+    vin: "549043REJIHDSFDS09", year: 2017, make: "Volkswagen", model: "Passat", color: "Black", wholesale_price: 22220.0, cover_photo: nil
+)
+vehicle8.save!
+vehicle8.cover_photo.attach(io: File.open('app/views/vehicles/volkswagen_passat_2017_black.jpg'), filename: 'volkswagen_passat_2017_black.jpg', content_type: 'image/jpg')
+
+vehicle9 = Vehicle.new(
+    vin: "6005434SDIOSDFJK", year: 2018, make: "Tesla", model: "Model S", color: "White", wholesale_price: 96000.0, cover_photo: nil
+)
+vehicle9.save!
+vehicle9.cover_photo.attach(io: File.open('app/views/vehicles/tesla_model-s_2018_white.jpg'), filename: 'tesla_model-s_2018_white.jpg', content_type: 'image/jpg')
+
+vehicle10 = Vehicle.new(
+    vin: "TDGKDFK45l345", year: 2019, make: "BMW", model: "i8", color: "Silver", wholesale_price: 147000.0, cover_photo: nil
+)
+vehicle10.save!
+vehicle10.cover_photo.attach(io: File.open('app/views/vehicles/bmw_i8_2019_silver.jpg'), filename: 'bmw_i8_2019_silver.jpg', content_type: 'image/jpg')
